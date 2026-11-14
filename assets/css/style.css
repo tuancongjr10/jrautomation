@@ -84,8 +84,9 @@ ul{padding:0;list-style:none}
 .header{position:sticky;top:0;z-index:50;background:var(--blue-deep);color:#fff;border-bottom:1px solid rgba(255,255,255,.12)}
 .header__row{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:68px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
-.brand svg{width:38px;height:38px;flex:none}
-.brand__name{font:800 1.35rem/1 var(--head);font-stretch:82%;letter-spacing:.005em}
+.brand img{display:block;max-width:none;flex:none}
+.brand__mark{height:44px;width:auto}
+.brand__word{height:16px;width:auto}
 .nav__list{display:flex;align-items:center;gap:clamp(16px,2.4vw,32px)}
 .nav__list a:not(.btn){color:var(--ice);text-decoration:none;font-weight:500;font-size:.95rem;padding:6px 0;border-bottom:2px solid transparent}
 .nav__list a:not(.btn):hover{color:#fff;border-bottom-color:var(--amber)}
@@ -163,6 +164,7 @@ ul{padding:0;list-style:none}
 .bento{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
 .tile{grid-column:span 2;position:relative;display:flex;flex-direction:column;gap:14px;padding:clamp(22px,2.6vw,32px);background:var(--panel);border:2px solid var(--ink);border-radius:var(--r)}
 .tile--wide{grid-column:span 4}
+.tile--half{grid-column:span 3}
 .tile--blue{background:var(--blue);border-color:var(--blue-deep);color:#fff}
 .tile--amber{background:var(--amber-soft);border-color:#B78400}
 .tile__icon{width:44px;height:44px;flex:none;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;color:var(--blue-mid)}
@@ -205,7 +207,7 @@ ul{padding:0;list-style:none}
 .about{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:clamp(32px,6vw,88px);align-items:start}
 .id{position:sticky;top:96px;background:var(--blue);color:#fff;border-radius:var(--r);padding:30px 28px;overflow:hidden;
   background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:28px 28px}
-.id__mono{font:800 5.2rem/1 var(--head);font-stretch:70%;color:var(--amber);letter-spacing:-.01em;margin-bottom:18px}
+.id__logo{display:block;height:96px;width:auto;margin-bottom:20px}
 .id h3{font:800 1.9rem/1.15 var(--head);font-stretch:78%}
 .id p{color:var(--ice);margin-top:6px;font-size:.98rem}
 .id__rail{display:flex;gap:14px;margin-top:22px;flex-wrap:wrap}
@@ -214,7 +216,7 @@ ul{padding:0;list-style:none}
 .about__text p{max-width:40em;color:var(--ink-2);font-size:1.05rem}
 .about__text .h2{margin-bottom:20px}
 .skills{margin-top:30px;display:grid;gap:0;border-top:2px solid var(--ink)}
-.skills div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--rule)}
+.skills div{display:grid;grid-template-columns:190px minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--rule)}
 .skills dt{font-weight:600;color:var(--ink)}
 .skills dd{color:var(--ink-2)}
 .how{margin-top:28px;display:grid;gap:12px}
@@ -275,7 +277,6 @@ a.info__v:hover{text-decoration:underline;text-underline-offset:4px}
 /* ---------- Footer ---------- */
 .footer{background:#071E3F;color:var(--ice);padding-block:40px;font-size:.93rem}
 .footer__row{display:flex;flex-wrap:wrap;gap:20px 40px;justify-content:space-between;align-items:center}
-.footer .brand__name{font-size:1.2rem}
 .footer nav{display:flex;flex-wrap:wrap;gap:8px 22px}
 .footer a{text-decoration:none;color:var(--ice)}
 .footer a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
@@ -311,9 +312,8 @@ a.info__v:hover{text-decoration:underline;text-underline-offset:4px}
   .nav__list a:not(.btn){display:block;padding:14px 0;font-size:1.05rem;border-bottom:0}
   .nav__list li:last-child{border:0;padding-top:16px}
   .nav__list .btn{width:100%}
-  .tile,.tile--wide{grid-column:span 3}
-  .tile--wide{grid-column:span 6}
-  .bento .tile:last-child{grid-column:span 6}
+  .tile,.tile--wide{grid-column:span 6}
+  .tile--half{grid-column:span 3}
   .proj{grid-template-columns:minmax(0,1fr);gap:10px}
 }
 @media (max-width:720px){
@@ -329,7 +329,7 @@ a.info__v:hover{text-decoration:underline;text-underline-offset:4px}
   .hmi__count b{display:inline}
 }
 @media (max-width:600px){
-  .tile,.tile--wide,.bento .tile:last-child{grid-column:span 6}
+  .tile,.tile--wide,.tile--half{grid-column:span 6}
   .hero__cta .btn{width:100%}
 }
 @media (prefers-reduced-motion:reduce){
