@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tuancongjr10.github.io/jrautomation/sitemap.xml
