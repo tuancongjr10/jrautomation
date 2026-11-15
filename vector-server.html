@@ -60,7 +60,7 @@
   <div class="wrap hero__grid">
     <div class="hero__text">
       <h1 id="h1">Sửa Vector, cài server riêng, kết nối&nbsp;AI</h1>
-      <p class="hero__lead">Vector hỏng, mất kết nối hay không nghe lệnh? Mình sửa phần cứng, cài server riêng để robot chạy lại, Việt hóa giọng nói và nối Vector với ChatGPT, DeepSeek, Xiaozhi.</p>
+      <p class="hero__lead">Vector không nghe lệnh, mất kết nối hay hỏng phần cứng? Mình sửa robot, cài server riêng, Việt hóa giọng nói và nối Vector với AI. Chưa biết lỗi ở đâu, bạn cứ mô tả, mình chẩn đoán và báo giá trước khi làm.</p>
       <div class="hero__cta">
         <a class="btn btn--amber" href="#gui-yeu-cau">Gửi yêu cầu</a>
         <a class="btn btn--ghost" href="https://zalo.me/0336341050" target="_blank" rel="noopener">Nhắn Zalo</a>
@@ -102,6 +102,25 @@
   </div>
 </section>
 
+<!-- ================= DẤU HIỆU ================= -->
+<section class="sec sec--panel" id="dau-hieu" aria-labelledby="h-dh">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="h-dh">Robot của bạn đang gặp chuyện gì?</h2>
+      <p>Tìm dòng giống tình trạng của bạn nhất để biết mình sẽ xử lý thế nào.</p>
+    </div>
+    <table class="cases">
+      <thead><tr><th scope="col">Dấu hiệu</th><th scope="col">Mình sẽ làm</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Gọi "Hey Vector" nhưng robot không phản hồi</th><td><b>Cài và cấu hình server riêng</b> để robot nghe và hiểu lệnh trở lại.</td></tr>
+        <tr><th scope="row">Robot báo mất kết nối hoặc không vào được Wi-Fi</th><td><b>Kiểm tra mạng và server</b>, cấu hình lại để robot kết nối ổn định.</td></tr>
+        <tr><th scope="row">Pin chai, sạc không vào, bánh xích không chạy, màn hình lỗi</th><td><b>Sửa phần cứng</b> sau khi chẩn đoán đúng lỗi.</td></tr>
+        <tr><th scope="row">Muốn Vector nói tiếng Việt hoặc trò chuyện với AI</th><td><b>Việt hóa giọng nói</b> và <b>kết nối ChatGPT, DeepSeek, Xiaozhi</b> theo model bạn chọn.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
 <!-- ================= BỐN VIỆC ================= -->
 <section class="sec" id="dich-vu" aria-labelledby="h-dv">
   <div class="wrap">
@@ -138,12 +157,28 @@
 
 <!-- ================= SERVER LÀ GÌ ================= -->
 <section class="sec sec--panel" id="server-la-gi" aria-labelledby="h-sv">
-  <div class="wrap split">
-    <h2 class="h2" id="h-sv">Vì sao Vector cần server riêng?</h2>
-    <div class="prose">
-      <p>Vector nghe lệnh giọng nói bằng cách gửi âm thanh lên một máy chủ để nhận dạng và xử lý. Máy chủ của hãng có thời điểm yêu cầu thuê bao và từng gián đoạn, khi đó robot mất khả năng nghe lệnh.</p>
-      <p>Server riêng, ví dụ Wire-Pod (phần mềm mã nguồn mở do cộng đồng viết), thay thế máy chủ đó. Robot nghe lệnh trở lại, và có thể chuyển câu hỏi sang model AI để trả lời như một trợ lý.</p>
-      <p class="note">Server cần một thiết bị chạy cùng mạng với robot, như máy tính cũ hoặc Raspberry Pi. Mình tư vấn phương án phù hợp khi báo giá.</p>
+  <div class="wrap split split--figure">
+    <figure class="figure">
+      <img src="assets/img/vector/vector-ban-ve.jpg" width="304" height="268" loading="lazy" alt="Bản vẽ phác thảo robot Vector với đôi mắt xanh lá">
+      <figcaption>Bản vẽ phác thảo Vector.</figcaption>
+    </figure>
+    <div>
+      <h2 class="h2" id="h-sv">Server riêng là gì, vì sao Vector cần?</h2>
+      <div class="prose lead-prose">
+        <p>Vector không tự hiểu giọng nói. Robot thu âm câu bạn nói, gửi tới một máy chủ (server) để chuyển thành chữ và hiểu ý, rồi nhận câu trả lời về.</p>
+        <p>Hãng Anki đã ngừng hoạt động, nên máy chủ gốc do công ty kế nhiệm quản lý. Máy chủ đó từng yêu cầu thuê bao và có lúc gián đoạn, khi ấy Vector không nghe lệnh được.</p>
+      </div>
+      <div class="compare">
+        <div>
+          <h3>Server của hãng</h3>
+          <p>Bạn phụ thuộc vào hãng: phí thuê bao, bảo trì, ngừng dịch vụ.</p>
+        </div>
+        <div>
+          <h3>Server riêng của bạn</h3>
+          <p>Chạy ở nhà, do bạn quản lý. Dùng Wire-Pod, phần mềm mã nguồn mở miễn phí của cộng đồng, và có thể chuyển câu hỏi sang model AI.</p>
+        </div>
+      </div>
+      <p class="note">Server cần một thiết bị chạy cùng mạng với robot, như máy tính cũ hoặc Raspberry Pi. Mình tư vấn phương án gọn nhất khi báo giá.</p>
     </div>
   </div>
 </section>

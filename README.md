@@ -21,6 +21,7 @@ assets/css/style.css  giao diện
 assets/js/main.js     menu điện thoại, chọn sẵn gói trong form, mô phỏng mạch tự giữ ở trang PLC
 assets/fonts/         font Archivo, Be Vietnam Pro (tự host)
 assets/img/           logo, favicon, ảnh xem trước khi chia sẻ link
+assets/img/vector/    ảnh robot Vector và áp phích Vector AI
 ```
 
 ## Sửa nội dung
