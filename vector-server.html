@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vector Repair &amp; Server | Sửa Vector, cài server, kết nối AI | Jr. Automation</title>
+<meta name="description" content="Sửa chữa robot Vector, cài và cấu hình server riêng, kết nối AI (ChatGPT, DeepSeek, Xiaozhi) và Việt hóa giọng nói. Báo giá theo tình trạng robot.">
+<meta name="author" content="Tuan Cong Jr">
+<meta name="theme-color" content="#0B2A55">
+<link rel="canonical" href="https://tuancongjr10.github.io/jrautomation/vector-server.html">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="Jr. Automation">
+<meta property="og:title" content="Vector Repair &amp; Server | Sửa Vector, cài server, kết nối AI | Jr. Automation">
+<meta property="og:description" content="Sửa chữa robot Vector, cài và cấu hình server riêng, kết nối AI (ChatGPT, DeepSeek, Xiaozhi) và Việt hóa giọng nói. Báo giá theo tình trạng robot.">
+<meta property="og:url" content="https://tuancongjr10.github.io/jrautomation/vector-server.html">
+<meta property="og:image" content="https://tuancongjr10.github.io/jrautomation/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preload" href="assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/archivo-vietnamese-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+<a class="skip" href="#noi-dung">Chuyển đến nội dung</a>
+
+<header class="header on-dark">
+  <div class="wrap header__row">
+    <a class="brand" href="./" aria-label="Jr. Automation, về trang chủ">
+      <img class="brand__mark" src="assets/img/logo-mark.png" width="33" height="44" alt="">
+      <img class="brand__word" src="assets/img/logo-wordmark.png" width="190" height="16" alt="Jr. Automation">
+    </a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Mở menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav" id="menu" aria-label="Menu chính">
+      <ul class="nav__list">
+        <li><a href="./">Trang chủ</a></li>
+        <li><a href="vector-store.html">Vector Store</a></li>
+        <li><a href="vector-server.html" aria-current="page">Vector Repair &amp; Server</a></li>
+        <li><a href="nachi.html">NACHI</a></li>
+        <li><a href="plc-hmi.html">PLC &amp; HMI</a></li>
+        <li><a href="kien-thuc.html">Kiến thức</a></li>
+        <li><a class="btn btn--amber btn--sm" href="lien-he.html">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="noi-dung">
+
+<section class="hero hero--page on-dark" id="top" aria-labelledby="h1">
+  <div class="wrap hero__grid">
+    <div class="hero__text">
+      <h1 id="h1">Sửa Vector, cài server riêng, kết nối&nbsp;AI</h1>
+      <p class="hero__lead">Vector hỏng, mất kết nối hay không nghe lệnh? Mình sửa phần cứng, cài server riêng để robot chạy lại, Việt hóa giọng nói và nối Vector với ChatGPT, DeepSeek, Xiaozhi.</p>
+      <div class="hero__cta">
+        <a class="btn btn--amber" href="#gui-yeu-cau">Gửi yêu cầu</a>
+        <a class="btn btn--ghost" href="https://zalo.me/0336341050" target="_blank" rel="noopener">Nhắn Zalo</a>
+      </div>
+    </div>
+
+    <div class="stage" role="group" aria-label="Sơ đồ: robot Vector gửi giọng nói tới server riêng, server chuyển câu hỏi cho model AI">
+      <p class="stage__title">Vector nối với server riêng và model AI</p>
+      <svg class="flow" viewBox="0 0 460 290" aria-hidden="true">
+        <rect class="box" x="10" y="20" width="120" height="96" rx="8"/>
+        <rect class="box box--hot" x="170" y="20" width="120" height="96" rx="8"/>
+        <rect class="box" x="330" y="20" width="120" height="96" rx="8"/>
+        <path class="wire" d="M132 68H168"/>
+        <path class="wire" d="M292 68H328"/>
+
+        <g class="ico"><rect x="48" y="30" width="44" height="30" rx="8"/><path d="M70 30v-8M64 22h12M59 42h.01M81 42h.01M63 52h14"/></g>
+        <text class="t1" x="70" y="88" text-anchor="middle">Robot Vector</text>
+        <text class="t2" x="70" y="106" text-anchor="middle">nghe lệnh</text>
+
+        <g class="ico"><rect x="208" y="28" width="44" height="14" rx="3"/><rect x="208" y="46" width="44" height="14" rx="3"/><path d="M214 35h.01M214 53h.01M222 35h24M222 53h24"/></g>
+        <text class="t1" x="230" y="88" text-anchor="middle">Server riêng</text>
+        <text class="t2" x="230" y="106" text-anchor="middle">hiểu tiếng Việt</text>
+
+        <g class="ico"><path d="M358 30h24a8 8 0 0 1 8 8v12a8 8 0 0 1-8 8h-12l-10 8v-8h-2a8 8 0 0 1-8-8V38a8 8 0 0 1 8-8z" transform="translate(0 0)"/><path d="M362 40h16M362 48h9"/></g>
+        <text class="t1" x="390" y="88" text-anchor="middle">Model AI</text>
+        <text class="t2" x="390" y="106" text-anchor="middle">trả lời</text>
+
+        <path class="wire" d="M390 118V150M75 150H390M75 150V176M232 150V176M390 150V176"/>
+        <rect class="box" x="10" y="176" width="130" height="44" rx="8"/>
+        <rect class="box" x="167" y="176" width="130" height="44" rx="8"/>
+        <rect class="box" x="325" y="176" width="125" height="44" rx="8"/>
+        <text class="t1" x="75" y="203" text-anchor="middle">ChatGPT</text>
+        <text class="t1" x="232" y="203" text-anchor="middle">DeepSeek</text>
+        <text class="t1" x="387" y="203" text-anchor="middle">Xiaozhi</text>
+        <text class="t2" x="230" y="252" text-anchor="middle">chọn một hoặc nhiều model</text>
+      </svg>
+      <p class="stage__note">Robot nghe lệnh, server riêng xử lý giọng nói, rồi chuyển câu hỏi cho model AI bạn chọn.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BỐN VIỆC ================= -->
+<section class="sec" id="dich-vu" aria-labelledby="h-dv">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="h-dv">Bốn việc mình làm</h2>
+      <p>Chọn một hoặc nhiều việc. Mình báo giá theo đúng phần bạn cần.</p>
+    </div>
+    <div class="bento">
+      <article class="tile tile--half tile--blue">
+        <svg class="tile__icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M20 5a6 6 0 0 0-5.5 8L5 22.500 9.500 27 19 17.500A6 6 0 0 0 27 12l-4 4-4-1-1-4 4-4a6 6 0 0 0-2-2z"/></svg>
+        <h3>Sửa chữa phần cứng</h3>
+        <p>Robot Vector bị lỗi pin, không di chuyển được, hỏng màn hình hay không sạc được.</p>
+        <div class="chips"><span class="chip">Pin</span><span class="chip">Di chuyển</span><span class="chip">Màn hình</span><span class="chip">Sạc</span></div>
+      </article>
+      <article class="tile tile--half">
+        <svg class="tile__icon" viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="5" width="24" height="8" rx="2"/><rect x="4" y="19" width="24" height="8" rx="2"/><path d="M9 9h.01M9 23h.01M14 9h10M14 23h10"/></svg>
+        <h3>Cài và cấu hình server</h3>
+        <p>Cài máy chủ riêng để Vector chạy lại, không phụ thuộc máy chủ của hãng.</p>
+      </article>
+      <article class="tile tile--half">
+        <svg class="tile__icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 7h22v14H15l-6 5v-5H5z"/><path d="M10 12h12M10 16h7"/></svg>
+        <h3>Kết nối AI</h3>
+        <p>Nối Vector với ChatGPT, DeepSeek, Xiaozhi hoặc model khác để trò chuyện tự nhiên.</p>
+        <div class="chips"><span class="chip">ChatGPT</span><span class="chip">DeepSeek</span><span class="chip">Xiaozhi</span></div>
+      </article>
+      <article class="tile tile--half tile--amber">
+        <svg class="tile__icon" viewBox="0 0 32 32" aria-hidden="true" style="color:#8A6200"><path d="M16 4a5 5 0 0 0-5 5v7a5 5 0 0 0 10 0V9a5 5 0 0 0-5-5z"/><path d="M7 15a9 9 0 0 0 18 0M16 24v4M11 28h10"/></svg>
+        <h3>Việt hóa giọng nói</h3>
+        <p>Vector nghe và nói tiếng Việt.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVER LÀ GÌ ================= -->
+<section class="sec sec--panel" id="server-la-gi" aria-labelledby="h-sv">
+  <div class="wrap split">
+    <h2 class="h2" id="h-sv">Vì sao Vector cần server riêng?</h2>
+    <div class="prose">
+      <p>Vector nghe lệnh giọng nói bằng cách gửi âm thanh lên một máy chủ để nhận dạng và xử lý. Máy chủ của hãng có thời điểm yêu cầu thuê bao và từng gián đoạn, khi đó robot mất khả năng nghe lệnh.</p>
+      <p>Server riêng, ví dụ Wire-Pod (phần mềm mã nguồn mở do cộng đồng viết), thay thế máy chủ đó. Robot nghe lệnh trở lại, và có thể chuyển câu hỏi sang model AI để trả lời như một trợ lý.</p>
+      <p class="note">Server cần một thiết bị chạy cùng mạng với robot, như máy tính cũ hoặc Raspberry Pi. Mình tư vấn phương án phù hợp khi báo giá.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUY TRÌNH ================= -->
+<section class="sec" id="quy-trinh" aria-labelledby="h-qt">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="h-qt">Quy trình làm việc</h2>
+      <p>Mỗi bước có đầu ra rõ ràng, bạn biết robot đang ở đâu.</p>
+    </div>
+    <ol class="steps steps--4" style="list-style:none;padding:0;margin:0">
+      <li class="step"><span class="step__n" aria-hidden="true">1</span><h3>Gửi tình trạng robot</h3><p>Mô tả lỗi qua form, ảnh hoặc video nhắn thêm qua Zalo.</p></li>
+      <li class="step"><span class="step__n" aria-hidden="true">2</span><h3>Chẩn đoán và báo giá</h3><p>Mình xác định lỗi, nói rõ phạm vi việc và chi phí.</p></li>
+      <li class="step"><span class="step__n" aria-hidden="true">3</span><h3>Thực hiện</h3><p>Sửa phần cứng hoặc cài server, tiếng Việt, AI theo phạm vi đã chốt.</p></li>
+      <li class="step"><span class="step__n" aria-hidden="true">4</span><h3>Chạy thử và bàn giao</h3><p>Thử các lệnh cùng bạn rồi mới bàn giao.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= HỎI ĐÁP ================= -->
+<section class="sec sec--panel" id="hoi-dap" aria-labelledby="h-hd">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="h-hd">Câu hỏi thường gặp</h2></div>
+    <div class="faq">
+      <details>
+        <summary>Vector bản nào cũng cài server được không?</summary>
+        <div><p>Wire-Pod hoạt động với cả Vector 1.0 và 2.0. Bạn nhắn tên bản và tình trạng robot để mình xác nhận trước khi báo giá.</p></div>
+      </details>
+      <details>
+        <summary>Server có cần chạy liên tục không?</summary>
+        <div><p>Có. Robot cần server bật và cùng mạng để nghe lệnh. Một máy tính cũ hoặc Raspberry Pi là đủ. Mình tư vấn phương án gọn và tiết kiệm điện cho bạn.</p></div>
+      </details>
+      <details>
+        <summary>Chi phí thế nào?</summary>
+        <div><p>Tùy việc bạn chọn: sửa phần cứng, cài server, kết nối AI hay Việt hóa giọng nói. Mình báo giá sau khi biết tình trạng robot.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GỬI YÊU CẦU ================= -->
+<section class="sec contact on-dark" id="gui-yeu-cau" aria-labelledby="h-gy">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="h-gy">Gửi yêu cầu cho mình</h2>
+      <p>Mô tả tình trạng robot. Ảnh và video nhắn thêm qua Zalo cho nhanh.</p>
+    </div>
+    <div class="contact__grid">
+      <ul class="info">
+        <li>
+          <span class="info__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></span>
+          <div><span class="info__k">Zalo</span><a class="info__v" href="https://zalo.me/0336341050" target="_blank" rel="noopener">0336 341 050</a></div>
+        </li>
+        <li>
+          <span class="info__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span>
+          <div><span class="info__k">Điện thoại</span><a class="info__v" href="tel:+84336341050">0336 341 050</a></div>
+        </li>
+        <li>
+          <span class="info__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+          <div><span class="info__k">Email</span><a class="info__v" href="mailto:tuancongjr10@gmail.com">tuancongjr10@gmail.com</a></div>
+        </li>
+        <li>
+          <span class="info__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.800 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+          <div><span class="info__k">Địa chỉ</span><span class="info__v info__v--plain">542/12/14, khu phố 25, đường Nguyễn Ảnh Thủ, phường Tân Thới Hiệp, TP Hồ Chí Minh</span><br><a class="info__sub" href="https://www.google.com/maps/search/?api=1&amp;query=542%2F12%2F14%20Nguy%E1%BB%85n%20%E1%BA%A2nh%20Th%E1%BB%A7%2C%20T%C3%A2n%20Th%E1%BB%9Bi%20Hi%E1%BB%87p%2C%20TP%20H%E1%BB%93%20Ch%C3%AD%20Minh" target="_blank" rel="noopener">Xem trên Google Maps</a></div>
+        </li>
+        <li>
+          <span class="info__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/></svg></span>
+          <div><span class="info__k">YouTube</span><a class="info__v" href="https://www.youtube.com/channel/UCqWKhlzt7eQtGVNYoNAj-9w" target="_blank" rel="noopener">Jr. Automation</a></div>
+        </li>
+        <li>
+          <span class="info__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8.500A.5.5 0 0 1 14.500 8z"/></svg></span>
+          <div><span class="info__k">Facebook</span><a class="info__v" href="https://web.facebook.com/cong.idol.773?locale=vi_VN" target="_blank" rel="noopener">Tuan Cong</a></div>
+        </li>
+      </ul>
+
+      <form class="form" action="https://formsubmit.co/tuancongjr10@gmail.com" method="POST">
+        <h3>Yêu cầu sửa chữa và cài server</h3>
+        <input type="hidden" name="_subject" value="Vector Repair & Server từ website Jr. Automation">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://tuancongjr10.github.io/jrautomation/cam-on.html">
+        <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="form__row">
+          <div class="field"><label for="s-ten">Họ và tên</label><input id="s-ten" name="Họ tên" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="s-sdt">Số điện thoại hoặc Zalo</label><input id="s-sdt" name="Điện thoại / Zalo" type="tel" inputmode="tel" autocomplete="tel" required></div>
+        </div>
+        <div class="field">
+          <label for="s-mail">Email (không bắt buộc)</label><input id="s-mail" name="email" type="email" autocomplete="email">
+        </div>
+        <fieldset class="field">
+          <legend>Bạn cần</legend>
+          <div class="choices">
+            <label class="choice"><input type="checkbox" name="Cần - Sửa chữa phần cứng" value="Có"><span>Sửa chữa phần cứng</span></label>
+            <label class="choice"><input type="checkbox" name="Cần - Cài và cấu hình server" value="Có"><span>Cài và cấu hình server</span></label>
+            <label class="choice"><input type="checkbox" name="Cần - Kết nối AI" value="Có"><span>Kết nối AI</span></label>
+            <label class="choice"><input type="checkbox" name="Cần - Việt hóa giọng nói" value="Có"><span>Việt hóa giọng nói</span></label>
+          </div>
+        </fieldset>
+        <div class="field">
+          <label for="s-nd">Tình trạng robot</label>
+          <textarea id="s-nd" name="Tình trạng robot" required placeholder="Robot đang bị gì, bản Vector nào, bạn đã thử những gì."></textarea>
+        </div>
+        <div class="form__foot">
+          <button class="btn btn--blue" type="submit">Gửi yêu cầu</button>
+          <span>Mình sẽ liên hệ lại qua số điện thoại hoặc Zalo bạn để lại.</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer on-dark">
+  <div class="wrap">
+    <div class="footer__cols">
+      <div>
+        <a class="brand" href="./" aria-label="Jr. Automation, về trang chủ">
+          <img class="brand__mark" src="assets/img/logo-mark.png" width="33" height="44" alt="">
+          <img class="brand__word" src="assets/img/logo-wordmark.png" width="190" height="16" alt="Jr. Automation">
+        </a>
+        <p class="footer__tag">Giải pháp robot, tự động hóa công nghiệp và AI ứng dụng.</p>
+      </div>
+      <div>
+        <h2>Dịch vụ</h2>
+        <ul>
+          <li><a href="vector-store.html">Vector Robot Store</a></li>
+          <li><a href="vector-server.html">Vector Repair &amp; Server</a></li>
+          <li><a href="nachi.html">NACHI Robotics</a></li>
+          <li><a href="plc-hmi.html">PLC &amp; HMI Services</a></li>
+          <li><a href="kien-thuc.html">Kiến thức &amp; YouTube</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Liên hệ</h2>
+        <ul>
+          <li><a href="https://zalo.me/0336341050" target="_blank" rel="noopener">Zalo 0336 341 050</a></li>
+          <li><a href="mailto:tuancongjr10@gmail.com">tuancongjr10@gmail.com</a></li>
+          <li><a href="https://www.youtube.com/channel/UCqWKhlzt7eQtGVNYoNAj-9w" target="_blank" rel="noopener">YouTube Jr. Automation</a></li>
+          <li><a href="https://web.facebook.com/cong.idol.773?locale=vi_VN" target="_blank" rel="noopener">Facebook Tuan Cong</a></li>
+          <li><a href="lien-he.html">Gửi yêu cầu</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__copy">© 2026 Tuan Cong Jr. Robot, tự động hóa và AI ứng dụng tại TP Hồ Chí Minh. Zalo và điện thoại 0336 341 050, email tuancongjr10@gmail.com.</p>
+  </div>
+</footer>
+
+<!-- Thanh liên hệ nhanh trên điện thoại -->
+<div class="mbar on-dark">
+  <a class="btn btn--ghost" href="tel:+84336341050">Gọi ngay</a>
+  <a class="btn btn--amber" href="https://zalo.me/0336341050" target="_blank" rel="noopener">Nhắn Zalo</a>
+</div>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

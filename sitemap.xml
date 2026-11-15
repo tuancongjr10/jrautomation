@@ -2,7 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tuancongjr10.github.io/jrautomation/</loc>
-    <lastmod>2026-11-14</lastmod>
+    <lastmod>2026-11-15</lastmod>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://tuancongjr10.github.io/jrautomation/vector-store.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tuancongjr10.github.io/jrautomation/vector-server.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tuancongjr10.github.io/jrautomation/nachi.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tuancongjr10.github.io/jrautomation/plc-hmi.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tuancongjr10.github.io/jrautomation/kien-thuc.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tuancongjr10.github.io/jrautomation/lien-he.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <priority>0.8</priority>
   </url>
 </urlset>

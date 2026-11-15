@@ -1,6 +1,7 @@
 /* Jr. Automation — main.js
    1) Menu điện thoại
-   2) Mô phỏng mạch khởi động - dừng tự giữ (Q0.0 = (START hoặc Q0.0) và không STOP)
+   2) Chọn sẵn dịch vụ / gói trong form
+   3) Mô phỏng mạch khởi động - dừng tự giữ (Q0.0 = (START hoặc Q0.0) và không STOP)
       kèm băng tải đếm sản phẩm qua cảm biến I0.2. */
 (function () {
   'use strict';
@@ -18,6 +19,28 @@
     menu.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
   }
+
+  /* ---------- Form liên hệ: chọn sẵn dịch vụ theo ?dv= ---------- */
+  var sel = document.querySelector('select[data-preselect]');
+  if (sel) {
+    var dv = new URLSearchParams(window.location.search).get('dv');
+    if (dv) {
+      for (var i = 0; i < sel.options.length; i++) {
+        if (sel.options[i].getAttribute('data-key') === dv) { sel.selectedIndex = i; break; }
+      }
+    }
+  }
+
+  /* ---------- Nút "Chọn gói": tích sẵn lựa chọn trong form bên dưới ---------- */
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest ? e.target.closest('[data-pick]') : null;
+    if (!b) return;
+    var want = b.getAttribute('data-pick');
+    var radios = document.querySelectorAll('input[type="radio"]');
+    for (var k = 0; k < radios.length; k++) {
+      if (radios[k].value === want) { radios[k].checked = true; break; }
+    }
+  });
 
   /* ---------- Mô phỏng PLC ---------- */
   var stage = document.getElementById('stage');
