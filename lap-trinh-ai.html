@@ -43,8 +43,8 @@
     <nav class="nav" id="menu" aria-label="Menu chính">
       <ul class="nav__list">
         <li><a href="./">Trang chủ</a></li>
-        <li><a href="vector-store.html">Vector Store</a></li>
-        <li><a href="vector-server.html">Vector Repair &amp; Server</a></li>
+        <li><a href="vector-store.html">Cửa hàng Vector</a></li>
+        <li><a href="vector-server.html">Sửa chữa &amp; máy chủ Vector</a></li>
         <li><a href="lap-trinh-ai.html" aria-current="page">Lập trình AI</a></li>
         <li><a href="kien-thuc.html">Kiến thức</a></li>
         <li><a class="btn btn--amber btn--sm" href="lien-he.html">Liên hệ</a></li>
@@ -124,35 +124,45 @@
       <h2 id="h-rb">Robot mình nhận lập trình</h2>
       <p>Robot tự chế thì mình làm trọn phần mềm. Robot của hãng thì mình lập trình trong phạm vi hãng cho phép, và nói rõ giới hạn trước khi nhận việc.</p>
     </div>
-    <div class="bento">
-      <article class="tile">
-        <svg class="tile__icon" viewBox="0 0 40 40" aria-hidden="true"><rect x="7" y="10" width="26" height="18" rx="7"/><circle cx="15" cy="19" r="2"/><circle cx="25" cy="19" r="2"/><path d="M10 11 7 4M30 11l3-7M13 28v5M27 28v5"/></svg>
-        <h3>Robot thú cưng Loona</h3>
-        <p>Loona đã có sẵn ChatGPT và chế độ lập trình kéo thả Google Blockly trong app. Mình viết chuỗi động tác, trò chơi, kịch bản theo ý bạn và hướng dẫn bé học lập trình cùng Loona.</p>
-        <div class="chips"><span class="chip">Google Blockly</span><span class="chip">ChatGPT có sẵn</span></div>
+    <div class="feats">
+      <article class="feat">
+        <img src="assets/img/robot/loona.jpg" width="640" height="500" loading="lazy" alt="Robot thú cưng Loona trên sàn gỗ">
+        <div class="feat__body">
+          <h3>Robot thú cưng Loona</h3>
+          <p>Loona đã có sẵn ChatGPT và chế độ lập trình kéo thả Google Blockly trong app. Mình viết chuỗi động tác, trò chơi, kịch bản theo ý bạn và hướng dẫn bé học lập trình cùng Loona.</p>
+          <div class="chips"><span class="chip">Google Blockly</span><span class="chip">ChatGPT có sẵn</span></div>
+        </div>
       </article>
-      <article class="tile">
-        <svg class="tile__icon" viewBox="0 0 40 40" aria-hidden="true"><rect x="8" y="5" width="24" height="18" rx="5"/><path d="M15 12v4M25 12v4"/><path d="M14 23v6h12v-6M10 34h20"/></svg>
-        <h3>Robot để bàn EMO</h3>
-        <p>EMO hiện chưa có SDK chính thức để lập trình. Mình tư vấn khai thác tính năng có sẵn, hoặc làm robot để bàn kiểu EMO với AI và tiếng Việt theo ý bạn.</p>
-        <div class="chips"><span class="chip">Tư vấn</span><span class="chip">Robot kiểu EMO tự chế</span></div>
+      <article class="feat">
+        <img src="assets/img/robot/emo.jpg" width="640" height="500" loading="lazy" alt="Robot để bàn EMO đeo tai nghe, đứng trên ván trượt">
+        <div class="feat__body">
+          <h3>Robot để bàn EMO</h3>
+          <p>EMO hiện chưa có SDK chính thức để lập trình. Mình tư vấn khai thác tính năng có sẵn, hoặc làm robot để bàn kiểu EMO với AI và tiếng Việt theo ý bạn.</p>
+          <div class="chips"><span class="chip">Tư vấn</span><span class="chip">Robot kiểu EMO tự chế</span></div>
+        </div>
       </article>
-      <article class="tile">
-        <svg class="tile__icon" viewBox="0 0 40 40" aria-hidden="true"><rect x="7" y="14" width="22" height="10" rx="4"/><rect x="27" y="7" width="10" height="9" rx="3"/><path d="M11 24v10M17 24v10M23 24v10M28 24v10M33 11h.01M7 17l-4-5"/></svg>
-        <h3>Chó robot</h3>
-        <p>Unitree Go2 bản EDU có SDK và ROS 2, Petoi Bittle mã nguồn mở, hoặc khung chó robot in 3D. Mình lập trình dáng đi, động tác, lệnh thoại và nối AI.</p>
-        <div class="chips"><span class="chip">Unitree Go2 EDU</span><span class="chip">Petoi Bittle</span><span class="chip">ESP32-S3</span></div>
+      <article class="feat">
+        <img src="assets/img/robot/cyberdog.jpg" width="640" height="500" loading="lazy" alt="Chó robot Xiaomi CyberDog">
+        <div class="feat__body">
+          <h3>Chó robot</h3>
+          <p>Xiaomi CyberDog mã nguồn mở trên ROS 2, Unitree Go2 bản EDU có SDK, Petoi Bittle, hoặc khung chó robot in 3D. Mình lập trình dáng đi, động tác, lệnh thoại và nối AI.</p>
+          <div class="chips"><span class="chip">CyberDog</span><span class="chip">Unitree Go2 EDU</span><span class="chip">Petoi Bittle</span><span class="chip">ESP32-S3</span></div>
+        </div>
       </article>
-      <article class="tile tile--half">
-        <svg class="tile__icon" viewBox="0 0 40 40" aria-hidden="true"><rect x="5" y="15" width="30" height="12" rx="3"/><path d="M11 15l3-7h12l3 7"/><circle cx="12" cy="30" r="4"/><circle cx="28" cy="30" r="4"/></svg>
-        <h3>Xe tự hành</h3>
-        <p>Xe robot dùng ESP32 hoặc Raspberry Pi: tránh vật cản, đi theo người, vẽ bản đồ phòng bằng LiDAR, nhận lệnh nói như "ra phòng khách".</p>
-        <div class="chips"><span class="chip">ROS 2</span><span class="chip">LiDAR</span><span class="chip">Xiaozhi</span></div>
+      <article class="feat">
+        <img src="assets/img/robot/xe-tu-hanh-ros.jpg" width="640" height="500" loading="lazy" alt="Xe robot tự hành có LiDAR và máy tính nhúng">
+        <div class="feat__body">
+          <h3>Xe tự hành</h3>
+          <p>Xe robot dùng ESP32 hoặc Raspberry Pi, Jetson: tránh vật cản, đi theo người, vẽ bản đồ phòng bằng LiDAR, nhận lệnh nói như "ra phòng khách".</p>
+          <div class="chips"><span class="chip">ROS 2</span><span class="chip">LiDAR</span><span class="chip">Xiaozhi</span></div>
+        </div>
       </article>
-      <article class="tile tile--half">
-        <svg class="tile__icon" viewBox="0 0 40 40" aria-hidden="true"><circle cx="11" cy="14" r="3"/><circle cx="20" cy="9" r="3"/><circle cx="29" cy="14" r="3"/><path d="M20 18c-6 0-10 6-10 10a4 4 0 0 0 5 4c2-.5 3-1 5-1s3 .5 5 1a4 4 0 0 0 5-4c0-4-4-10-10-10z"/></svg>
+    </div>
+    <div class="bento" style="margin-top:16px">
+      <article class="tile tile--amber" style="grid-column:1 / -1">
+        <svg class="tile__icon" viewBox="0 0 40 40" aria-hidden="true" style="color:#8A6200"><circle cx="11" cy="14" r="3"/><circle cx="20" cy="9" r="3"/><circle cx="29" cy="14" r="3"/><path d="M20 18c-6 0-10 6-10 10a4 4 0 0 0 5 4c2-.5 3-1 5-1s3 .5 5 1a4 4 0 0 0 5-4c0-4-4-10-10-10z"/></svg>
         <h3>Robot thú cưng tự chế</h3>
-        <p>Mèo, chó, thú cưng mini hay robot để bàn trên ESP32-S3: mắt biểu cảm, phản ứng khi được chạm, trò chuyện tiếng Việt và tính cách riêng.</p>
+        <p>Mèo, chó, thú cưng mini hay robot để bàn trên ESP32-S3: mắt biểu cảm, phản ứng khi được chạm, trò chuyện tiếng Việt và tính cách riêng. Bạn có khung hoặc ý tưởng, mình làm trọn phần mềm.</p>
         <div class="chips"><span class="chip">ESP32-S3</span><span class="chip">Xiaozhi</span><span class="chip">Màn hình mắt</span></div>
       </article>
     </div>
@@ -473,8 +483,8 @@
       <div>
         <h2>Dịch vụ</h2>
         <ul>
-          <li><a href="vector-store.html">Vector Robot Store</a></li>
-          <li><a href="vector-server.html">Vector Repair &amp; Server</a></li>
+          <li><a href="vector-store.html">Cửa hàng robot Vector</a></li>
+          <li><a href="vector-server.html">Sửa chữa &amp; máy chủ Vector</a></li>
           <li><a href="lap-trinh-ai.html">Lập trình AI cho robot</a></li>
           <li><a href="kien-thuc.html">Kiến thức &amp; YouTube</a></li>
         </ul>

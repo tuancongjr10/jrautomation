@@ -9,8 +9,8 @@ Website Jr. Automation của Tuan Cong: robot Vector tiếng Việt tích hợp 
 
 ```
 index.html            trang chủ: hero, ô chọn dịch vụ, cách đặt hàng
-vector-store.html     Vector Robot Store: đặt mua robot Vector tiếng Việt tích hợp AI
-vector-server.html    Vector Repair & Server: sửa chữa, cài server, kết nối AI, Việt hóa giọng nói
+vector-store.html     Cửa hàng robot Vector: đặt mua robot Vector tiếng Việt tích hợp AI
+vector-server.html    Sửa chữa & máy chủ Vector: sửa chữa, cài server, kết nối AI, Việt hóa giọng nói
 lap-trinh-ai.html     Lập trình AI cho robot: việc làm được, bốn ví dụ triển khai, tích hợp Xiaozhi
 kien-thuc.html        Kiến thức và kênh YouTube
 lien-he.html          liên hệ và form chung (chọn sẵn dịch vụ bằng ?dv=vector|server|ai|khac)
