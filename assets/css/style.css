@@ -118,42 +118,8 @@ ul{padding:0;list-style:none}
 .stage svg{display:block;width:100%;height:auto}
 .stage__note{margin:14px 8px 0;font-size:.875rem;line-height:1.55;color:var(--ice)}
 
-.ladder .wire{stroke:var(--bp-line);stroke-width:3;fill:none;stroke-linecap:round;transition:stroke .12s}
-.ladder .wire.on{stroke:var(--amber);filter:drop-shadow(0 0 3px rgba(255,194,26,.65))}
-.ladder .rail{stroke:#8FB2E3;stroke-width:4;stroke-linecap:round}
-.ladder .bar{stroke:var(--ice);stroke-width:3.5;stroke-linecap:round;transition:stroke .12s}
-.ladder .bar.on{stroke:var(--amber)}
-.ladder .coil{stroke:var(--ice);stroke-width:3.5;fill:none;stroke-linecap:round;transition:stroke .12s}
-.ladder .coil.on{stroke:var(--amber);filter:drop-shadow(0 0 4px rgba(255,194,26,.8))}
-.ladder .node{fill:var(--bp-line);transition:fill .12s}
-.ladder .node.on{fill:var(--amber)}
-.ladder .adr{font:600 12.5px var(--mono);fill:#8FB2E3}
-.ladder .cap{font:600 13px var(--body);fill:#fff}
-.ladder .rail-lbl{font:600 12.5px var(--mono);fill:#8FB2E3}
 
-.belt .frame{fill:#102F5C;stroke:var(--bp-line);stroke-width:2}
-.belt .belt-top{stroke:var(--ice);stroke-width:3;stroke-dasharray:14 10;fill:none}
-.belt .roller{fill:var(--blue-deep);stroke:var(--bp-line);stroke-width:2.5}
-.belt .box{fill:var(--amber-soft);stroke:#B78400;stroke-width:2}
-.belt .box-tape{stroke:#B78400;stroke-width:2}
-.belt .beam{stroke:var(--red);stroke-width:2;stroke-dasharray:3 4;opacity:.55}
-.belt .beam.on{opacity:1;stroke-width:3}
-.belt .sensor{fill:var(--blue-deep);stroke:var(--bp-line);stroke-width:2.5}
-.belt .sensor.on{fill:var(--amber);stroke:var(--amber)}
-.belt .adr{font:600 12.5px var(--mono);fill:#8FB2E3}
 
-.hmi{display:grid;grid-template-columns:auto auto 1fr auto;gap:10px;align-items:center;margin-top:10px;padding:10px 12px;background:#08203F;border:1px solid #2B5594;border-radius:6px}
-.hmi[hidden]{display:none}
-.hmi__btn{min-height:46px;min-width:86px;padding:0 18px;border-radius:6px;border:2px solid;font:700 .98rem/1 var(--body);color:#fff;cursor:pointer;transition:transform .06s,filter .15s}
-.hmi__btn:hover{filter:brightness(1.12)}
-.hmi__btn:active{transform:translateY(1px)}
-.hmi__btn--start{background:#1E7A47;border-color:#52C888}
-.hmi__btn--stop{background:#A8281F;border-color:#F27A70}
-.hmi__state{display:flex;align-items:center;gap:8px;font-weight:600;font-size:.92rem;color:#fff;padding-inline:6px}
-.lamp{width:14px;height:14px;border-radius:50%;background:#46535F;border:2px solid #8FB2E3;transition:background .15s,box-shadow .15s}
-.lamp.on{background:var(--green);border-color:#7BE0A6;box-shadow:0 0 10px 2px rgba(46,158,91,.75)}
-.hmi__count{text-align:right;line-height:1.1;color:var(--ice);font-size:.8rem}
-.hmi__count b{display:block;font:800 1.7rem/1 var(--head);font-stretch:85%;color:var(--amber);font-variant-numeric:tabular-nums}
 
 /* ---------- Tiêu đề mục ---------- */
 .sec-head{max-width:42rem;margin-bottom:clamp(32px,4vw,56px)}
@@ -569,3 +535,71 @@ fieldset.field{border:0;padding:0;margin:0;min-width:0}
   .feat h3{font-size:1.1rem}
   .feat p{font-size:.88rem;line-height:1.5}
 }
+
+
+/* =====================================================================
+   Phiên bản tập trung Vector: ảnh từng mục, thẻ dịch vụ, ví dụ triển khai
+   ===================================================================== */
+
+/* ---------- Thẻ chữ trên ảnh hero ---------- */
+.photo-tags{position:absolute;left:3%;bottom:4%;right:3%;display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.photo-tags li{padding:4px 12px;border-radius:999px;background:rgba(9,30,66,.82);border:1.5px solid var(--ice);color:#fff;font-size:.85rem;font-weight:600;line-height:1.5}
+
+/* ---------- Thẻ dịch vụ có ảnh ---------- */
+.svc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.svc{position:relative;display:flex;flex-direction:column;background:var(--panel);border:2px solid var(--ink);border-radius:var(--r);overflow:hidden;transition:transform .15s,box-shadow .15s}
+.svc--amber{background:var(--amber-soft);border-color:#B78400}
+.svc__media,.plan__media{position:relative;aspect-ratio:16 / 10;overflow:hidden;display:grid;place-items:center;background-color:var(--blue-deep);border-bottom:2px solid var(--ink);
+  background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:24px 24px}
+.svc--amber .svc__media{border-bottom-color:#B78400}
+.svc__media>img,.plan__media>img{display:block;width:100%;height:100%;object-fit:cover}
+.svc__media>svg.flow,.plan__media>svg.flow{width:100%;height:100%;padding:12px 14px}
+.svc__media .yt__play{width:100%;height:100%;aspect-ratio:auto;border:0;border-radius:0}
+.svc__body{display:flex;flex-direction:column;gap:12px;padding:clamp(20px,2.4vw,28px);flex:1}
+.svc h3{font:700 1.55rem/1.18 var(--head);font-stretch:80%;color:var(--blue)}
+.svc p{color:var(--ink-2)}
+.svc--amber p{color:#3A3320}
+.svc .price-line{font-weight:600;color:var(--ink)}
+.svc:has(.tile__go):hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--blue)}
+.svc:has(.tile__go):focus-within{box-shadow:6px 6px 0 var(--blue)}
+.svc .tile__foot:empty{display:none}
+.svc .tile__go{margin-top:0}
+
+/* ---------- Ảnh trong thẻ gói ---------- */
+.plan{overflow:hidden;--pad:clamp(22px,2.6vw,30px)}
+.plan__media{margin:calc(var(--pad) * -1) calc(var(--pad) * -1) 4px;width:calc(100% + var(--pad) * 2)}
+.plan--amber .plan__media{border-bottom-color:#B78400}
+
+/* ---------- Ví dụ triển khai ---------- */
+.examples{display:grid}
+.case{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(24px,4vw,56px);align-items:center;padding-block:clamp(28px,4vw,46px);border-top:2px solid var(--ink)}
+.case:last-child{border-bottom:2px solid var(--ink)}
+.case:nth-child(even) .case__fig{order:2}
+.case__fig{margin:0;padding:12px;background:var(--blue-deep);border:2px solid var(--bp-line);border-radius:var(--r);
+  background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:24px 24px}
+.case__fig svg{display:block;width:100%;height:auto}
+.case__tag{display:inline-block;margin-bottom:10px;padding:3px 12px;border-radius:999px;background:var(--ice);color:var(--blue-deep);font:600 .85rem/1.5 var(--body)}
+.case h3{font:800 clamp(1.6rem,2.6vw,2.15rem)/1.15 var(--head);font-stretch:78%;color:var(--blue);margin-bottom:10px;text-wrap:balance}
+.case__lead{color:var(--ink);font-size:1.05rem;margin-bottom:16px;max-width:36em}
+.case__k{margin-bottom:8px;font-weight:600;color:var(--blue)}
+.case .note{margin-top:16px;max-width:36em}
+.ticks--lg{gap:14px;font-size:1.05rem}
+.ticks--lg b{color:var(--ink);font-weight:600}
+
+@media (max-width:1000px){
+  .case{grid-template-columns:minmax(0,1fr)}
+  .case:nth-child(even) .case__fig{order:0}
+  .case__fig{max-width:520px}
+}
+@media (max-width:720px){
+  .svc-grid{grid-template-columns:minmax(0,1fr)}
+  .photo-tags{gap:6px}
+  .photo-tags li{padding:3px 10px;font-size:.78rem}
+}
+
+/* Thẻ kênh YouTube trong khung ảnh */
+.yt-card{display:grid;justify-items:center;gap:8px;color:var(--amber)}
+.yt-card img{display:block;height:64px;width:auto}
+.yt-card .yt__name{font:800 1.7rem/1.1 var(--head);font-stretch:78%;color:#fff}
+.yt-card svg{width:56px;height:56px}
+.plan__media>svg.flow{padding:6px 8px}

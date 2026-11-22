@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lập trình AI cho robot | Server theo yêu cầu, tích hợp Xiaozhi | Jr. Automation</title>
+<meta name="description" content="Lập trình phần mềm AI cho robot Vector và robot tự chế: server riêng, kết nối thẳng Xiaozhi, server Xiaozhi riêng, lệnh thoại, hành vi riêng. Báo giá theo từng dự án.">
+<meta name="author" content="Tuan Cong Jr">
+<meta name="theme-color" content="#0B2A55">
+<link rel="canonical" href="https://tuancongjr10.github.io/jrautomation/lap-trinh-ai.html">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:site_name" content="Jr. Automation">
+<meta property="og:title" content="Lập trình AI cho robot | Server theo yêu cầu, tích hợp Xiaozhi | Jr. Automation">
+<meta property="og:description" content="Phần mềm AI cho robot: server riêng, tích hợp Xiaozhi, ChatGPT, DeepSeek theo yêu cầu.">
+<meta property="og:url" content="https://tuancongjr10.github.io/jrautomation/lap-trinh-ai.html">
+<meta property="og:image" content="https://tuancongjr10.github.io/jrautomation/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preload" href="assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/archivo-vietnamese-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+<a class="skip" href="#noi-dung">Chuyển đến nội dung</a>
+
+<header class="header on-dark">
+  <div class="wrap header__row">
+    <a class="brand" href="./" aria-label="Jr. Automation, về trang chủ">
+      <img class="brand__mark" src="assets/img/logo-mark.png" width="33" height="44" alt="">
+      <img class="brand__word" src="assets/img/logo-wordmark.png" width="190" height="16" alt="Jr. Automation">
+    </a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Mở menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav" id="menu" aria-label="Menu chính">
+      <ul class="nav__list">
+        <li><a href="./">Trang chủ</a></li>
+        <li><a href="vector-store.html">Vector Store</a></li>
+        <li><a href="vector-server.html">Vector Repair &amp; Server</a></li>
+        <li><a href="lap-trinh-ai.html" aria-current="page">Lập trình AI</a></li>
+        <li><a href="kien-thuc.html">Kiến thức</a></li>
+        <li><a class="btn btn--amber btn--sm" href="lien-he.html">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="noi-dung">
+
+<section class="hero hero--page on-dark" id="top" aria-labelledby="h1">
+  <div class="wrap hero__grid">
+    <div class="hero__text">
+      <h1 id="h1">Lập trình phần mềm AI cho robot của&nbsp;bạn</h1>
+      <p class="hero__lead">Mình viết phần mềm để robot nghe, hiểu và trả lời bằng AI. Làm cho robot Vector hoặc robot tự chế của bạn, từ server riêng đến tích hợp Xiaozhi, theo đúng yêu cầu.</p>
+      <div class="hero__cta">
+        <a class="btn btn--amber" href="#gui-yeu-cau">Gửi yêu cầu</a>
+        <a class="btn btn--ghost" href="#vi-du">Xem ví dụ triển khai</a>
+      </div>
+      <p class="price-tag"><b>Giá</b> báo theo từng dự án</p>
+    </div>
+
+    <div class="stage">
+      <p class="stage__title">Phần mềm AI nằm giữa robot và các model</p>
+      <svg class="flow" viewBox="0 0 400 250" role="img" aria-label="Sơ đồ: phần mềm AI do mình lập trình nằm giữa robot và các model như Xiaozhi, ChatGPT, DeepSeek"><rect class="box" x="4" y="80" width="86" height="94" rx="8"/><g class="ico" transform="translate(27.0 92) scale(1.0)"><rect x="4" y="9" width="32" height="22" rx="8"/><rect x="13" y="16" width="5" height="7" rx="1.5"/><rect x="22" y="16" width="5" height="7" rx="1.5"/><path d="M9 35h22"/></g><text class="t1" x="47.0" y="149.0" text-anchor="middle">Robot</text><rect class="box box--hot" x="120" y="30" width="160" height="194" rx="8"/><g class="ico" transform="translate(180.0 42) scale(1.0)"><path d="M14 11 5 20l9 9M26 11l9 9-9 9M23 8l-6 24"/></g><text class="t1" x="200.0" y="99.0" text-anchor="middle">Phần mềm AI</text><text class="t2" x="200.0" y="116.0" text-anchor="middle">do mình lập trình</text><text class="t2" x="200" y="160" text-anchor="middle">giọng nói tiếng Việt</text><text class="t2" x="200" y="182" text-anchor="middle">lệnh thoại riêng</text><text class="t2" x="200" y="204" text-anchor="middle">điều khiển thiết bị</text><rect class="box" x="308" y="14" width="88" height="62" rx="8"/><text class="t1" x="352" y="51" text-anchor="middle">Xiaozhi</text><rect class="box" x="308" y="94" width="88" height="62" rx="8"/><text class="t1" x="352" y="131" text-anchor="middle">ChatGPT</text><rect class="box" x="308" y="174" width="88" height="62" rx="8"/><text class="t1" x="352" y="211" text-anchor="middle">DeepSeek</text><path class="wire" d="M92 127H118"/><path class="wire" d="M282 127H296M296 45V205M296 45H306M296 125H306M296 205H306"/></svg>
+      <p class="stage__note">Robot nói, phần mềm xử lý giọng nói và lệnh, rồi gọi model AI bạn chọn để trả lời.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LÀM ĐƯỢC GÌ ================= -->
+<section class="sec" id="lam-gi" aria-labelledby="h-lg">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="h-lg">Mình lập trình được gì cho robot?</h2>
+      <p>Chọn phần bạn cần. Mỗi dự án mình báo giá theo đúng phạm vi.</p>
+    </div>
+    <div class="bento">
+      <article class="tile">
+        <svg class="tile__icon" viewBox="0 0 40 40" aria-hidden="true"><rect x="14" y="4" width="12" height="20" rx="6"/><path d="M8 19a12 12 0 0 0 24 0M20 31v5M14 36h12"/></svg>
+        <h3>Giọng nói tiếng Việt</h3>
+        <p>Robot nghe và nói tiếng Việt: nhận dạng giọng nói và đọc câu trả lời thành tiếng.</p>
+      </article>
+      <article class="tile">
+        <svg class="tile__icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M7 8h26a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H19l-8 7v-7H7a3 3 0 0 1-3-3V11a3 3 0 0 1 3-3z"/><path d="M11 16h18M11 22h10"/></svg>
+        <h3>Trò chuyện với AI</h3>
+        <p>Nối robot với Xiaozhi, ChatGPT, DeepSeek hoặc model khác. Đặt tính cách và vai trò riêng cho robot.</p>
+      </article>
+      <article class="tile">
+        <svg class="tile__icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M14 11 5 20l9 9M26 11l9 9-9 9M23 8l-6 24"/></svg>
+        <h3>Lệnh thoại riêng</h3>
+        <p>Tạo câu lệnh theo ý bạn: nói một câu, robot làm đúng một việc đã định.</p>
+      </article>
+      <article class="tile">
+        <svg class="tile__icon" viewBox="0 0 40 40" aria-hidden="true"><path d="M5 17a21 21 0 0 1 30 0M11 23a13 13 0 0 1 18 0M16 29a6 6 0 0 1 8 0M20 35h.01"/></svg>
+        <h3>Điều khiển thiết bị</h3>
+        <p>Nối robot với thiết bị trong nhà, như đèn, theo yêu cầu và tùy thiết bị hỗ trợ.</p>
+      </article>
+      <article class="tile">
+        <svg class="tile__icon" viewBox="0 0 40 40" aria-hidden="true"><rect x="7" y="14" width="22" height="10" rx="4"/><rect x="27" y="7" width="10" height="9" rx="3"/><path d="M11 24v10M17 24v10M23 24v10M28 24v10M33 11h.01M7 17l-4-5"/></svg>
+        <h3>Hành vi và chuyển động</h3>
+        <p>Lập trình cách robot tự di chuyển, tránh vật cản, chống rơi mép bàn và làm động tác khi nghe lệnh.</p>
+      </article>
+      <article class="tile tile--amber">
+        <svg class="tile__icon" viewBox="0 0 40 40" aria-hidden="true" style="color:#8A6200"><rect x="4" y="6" width="32" height="12" rx="3"/><rect x="4" y="22" width="32" height="12" rx="3"/><path d="M10 12h.01M10 28h.01M16 12h14M16 28h14"/></svg>
+        <h3>Trang cài đặt và cập nhật</h3>
+        <p>Trang web để đổi Wi-Fi, chọn model AI, xem nhật ký. Cập nhật phần mềm qua Wi-Fi. Tùy robot.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VÍ DỤ TRIỂN KHAI ================= -->
+<section class="sec sec--panel" id="vi-du" aria-labelledby="h-vd">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="h-vd">Ví dụ triển khai theo yêu cầu</h2>
+      <p>Bốn cách làm hay gặp. Bạn có thể chọn một cách, hoặc mô tả nhu cầu để mình đề xuất phương án phù hợp.</p>
+    </div>
+    <div class="examples">
+    <article class="case">
+      <figure class="case__fig"><svg class="flow" viewBox="0 0 400 250" role="img" aria-label="Sơ đồ: robot Vector gửi giọng nói tới server riêng tại nhà, server chuyển câu hỏi cho model AI"><rect class="box" x="8" y="28" width="100" height="118" rx="8"/><g class="ico" transform="translate(38.0 40) scale(1.0)"><rect x="4" y="9" width="32" height="22" rx="8"/><rect x="13" y="16" width="5" height="7" rx="1.5"/><rect x="22" y="16" width="5" height="7" rx="1.5"/><path d="M9 35h22"/></g><text class="t1" x="58.0" y="97.0" text-anchor="middle">Vector</text><text class="t2" x="58.0" y="114.0" text-anchor="middle">1.0 và 2.0</text><rect class="box box--hot" x="150" y="28" width="100" height="118" rx="8"/><g class="ico" transform="translate(180.0 40) scale(1.0)"><rect x="4" y="6" width="32" height="12" rx="3"/><rect x="4" y="22" width="32" height="12" rx="3"/><path d="M10 12h.01M10 28h.01M16 12h14M16 28h14"/></g><text class="t1" x="200.0" y="97.0" text-anchor="middle">Server riêng</text><text class="t2" x="200.0" y="114.0" text-anchor="middle">tại nhà</text><rect class="box" x="292" y="28" width="100" height="118" rx="8"/><g class="ico" transform="translate(322.0 40) scale(1.0)"><path d="M16 6a5 5 0 0 0-5 5 5 5 0 0 0-3 8 5 5 0 0 0 3 8 5 5 0 0 0 9 3V9a5 5 0 0 0-4-3zM24 6a5 5 0 0 1 5 5 5 5 0 0 1 3 8 5 5 0 0 1-3 8 5 5 0 0 1-9 3"/></g><text class="t1" x="342.0" y="97.0" text-anchor="middle">Model AI</text><text class="t2" x="342.0" y="114.0" text-anchor="middle">bạn chọn</text><path class="wire" d="M110 87H148"/><path class="wire" d="M252 87H290"/><text class="t2" x="200" y="188" text-anchor="middle">máy tính cũ hoặc Raspberry Pi</text><text class="t2" x="200" y="208" text-anchor="middle">cùng mạng với robot</text></svg></figure>
+      <div class="case__body">
+        <span class="case__tag">Vector 1.0 và 2.0</span>
+        <h3>Server riêng tại nhà</h3>
+        <p class="case__lead">Phù hợp khi bạn muốn robot nghe lệnh ổn định, không phụ thuộc máy chủ của hãng.</p>
+        <p class="case__k">Mình làm</p>
+        <ul class="ticks">
+            <li>Cài server riêng trên máy tính cũ hoặc Raspberry Pi cùng mạng với robot</li>
+            <li>Cấu hình Wi-Fi và kết nối robot với server</li>
+            <li>Việt hóa giọng nói và nối model AI bạn chọn</li>
+            <li>Hướng dẫn bật, tắt và xử lý lỗi thường gặp</li>
+        </ul>
+        <p class="note">Server cần bật liên tục để robot nghe lệnh.</p>
+      </div>
+    </article>
+    <article class="case">
+      <figure class="case__fig"><svg class="flow" viewBox="0 0 400 250" role="img" aria-label="Sơ đồ: robot Vector kết nối thẳng tới Xiaozhi qua Wi-Fi, không cần máy trung gian"><rect class="box" x="8" y="16" width="112" height="112" rx="8"/><g class="ico" transform="translate(44.0 28) scale(1.0)"><rect x="4" y="9" width="32" height="22" rx="8"/><rect x="13" y="16" width="5" height="7" rx="1.5"/><rect x="22" y="16" width="5" height="7" rx="1.5"/><path d="M9 35h22"/></g><text class="t1" x="64.0" y="85.0" text-anchor="middle">Vector 1.0</text><text class="t2" x="64.0" y="102.0" text-anchor="middle">cài phần mềm</text><rect class="box box--hot" x="280" y="16" width="112" height="112" rx="8"/><g class="ico" transform="translate(316.0 28) scale(1.0)"><path d="M7 8h26a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H19l-8 7v-7H7a3 3 0 0 1-3-3V11a3 3 0 0 1 3-3z"/><path d="M11 16h18M11 22h10"/></g><text class="t1" x="336.0" y="85.0" text-anchor="middle">Xiaozhi</text><text class="t2" x="336.0" y="102.0" text-anchor="middle">trợ lý AI</text><path class="wire" d="M122 72H278"/><g class="ico" transform="translate(180 24) scale(1.0)"><path d="M5 17a21 21 0 0 1 30 0M11 23a13 13 0 0 1 18 0M16 29a6 6 0 0 1 8 0M20 35h.01"/></g><text class="t2" x="200" y="100" text-anchor="middle">qua Wi-Fi</text><rect x="124" y="158" width="152" height="44" rx="8" fill="none" stroke="#5C86BE" stroke-width="2.5" stroke-dasharray="6 6" opacity=".75"/><text class="t2" x="200" y="185" text-anchor="middle" opacity=".85">Pi hoặc máy tính</text><text class="t1" x="200" y="230" text-anchor="middle" style="fill:#FFC21A">không cần máy trung gian</text></svg></figure>
+      <div class="case__body">
+        <span class="case__tag">Vector 1.0</span>
+        <h3>Robot kết nối thẳng tới Xiaozhi</h3>
+        <p class="case__lead">Phù hợp khi bạn không muốn bật thêm máy tính hay Raspberry Pi chỉ để robot trò chuyện.</p>
+        <p class="case__k">Mình làm</p>
+        <ul class="ticks">
+            <li>Cài phần mềm lên robot để robot kết nối thẳng tới Xiaozhi qua Wi-Fi</li>
+            <li>Thiết lập tên robot, tính cách và các lệnh thoại cơ bản</li>
+            <li>Hướng dẫn đổi Wi-Fi, chọn model và cập nhật phần mềm</li>
+        </ul>
+        <p class="note">Phương án này thay đổi phần mềm trên robot, nên mình giải thích rõ phạm vi thay đổi và chốt với bạn trước khi làm.</p>
+      </div>
+    </article>
+    <article class="case">
+      <figure class="case__fig"><svg class="flow" viewBox="0 0 400 250" role="img" aria-label="Sơ đồ: nhiều robot nối vào một server Xiaozhi riêng, server dùng ba thành phần nghe, hiểu và nói"><rect class="box" x="6" y="10" width="88" height="64" rx="8"/><g class="ico" transform="translate(34.0 18) scale(0.8)"><rect x="4" y="9" width="32" height="22" rx="8"/><rect x="13" y="16" width="5" height="7" rx="1.5"/><rect x="22" y="16" width="5" height="7" rx="1.5"/><path d="M9 35h22"/></g><text class="t1" x="50.0" y="67.0" text-anchor="middle">Robot 1</text><rect class="box" x="6" y="82" width="88" height="64" rx="8"/><g class="ico" transform="translate(34.0 90) scale(0.8)"><rect x="4" y="9" width="32" height="22" rx="8"/><rect x="13" y="16" width="5" height="7" rx="1.5"/><rect x="22" y="16" width="5" height="7" rx="1.5"/><path d="M9 35h22"/></g><text class="t1" x="50.0" y="139.0" text-anchor="middle">Robot 2</text><rect class="box" x="6" y="154" width="88" height="64" rx="8"/><g class="ico" transform="translate(34.0 162) scale(0.8)"><rect x="4" y="9" width="32" height="22" rx="8"/><rect x="13" y="16" width="5" height="7" rx="1.5"/><rect x="22" y="16" width="5" height="7" rx="1.5"/><path d="M9 35h22"/></g><text class="t1" x="50.0" y="211.0" text-anchor="middle">Robot 3</text><rect class="box box--hot" x="140" y="29" width="120" height="170" rx="8"/><g class="ico" transform="translate(180.0 41) scale(1.0)"><rect x="4" y="6" width="32" height="12" rx="3"/><rect x="4" y="22" width="32" height="12" rx="3"/><path d="M10 12h.01M10 28h.01M16 12h14M16 28h14"/></g><text class="t1" x="200.0" y="98.0" text-anchor="middle">Server Xiaozhi</text><text class="t2" x="200.0" y="115.0" text-anchor="middle">riêng của bạn</text><rect class="box" x="306" y="10" width="88" height="64" rx="8"/><g class="ico" transform="translate(334.0 18) scale(0.8)"><path d="M10 16a10 10 0 0 1 20 0c0 6-6 7-6 12a5 5 0 0 1-10 0"/><path d="M16 16a4 4 0 0 1 8 0"/></g><text class="t1" x="350.0" y="67.0" text-anchor="middle">Nghe</text><rect class="box" x="306" y="82" width="88" height="64" rx="8"/><g class="ico" transform="translate(334.0 90) scale(0.8)"><path d="M16 6a5 5 0 0 0-5 5 5 5 0 0 0-3 8 5 5 0 0 0 3 8 5 5 0 0 0 9 3V9a5 5 0 0 0-4-3zM24 6a5 5 0 0 1 5 5 5 5 0 0 1 3 8 5 5 0 0 1-3 8 5 5 0 0 1-9 3"/></g><text class="t1" x="350.0" y="139.0" text-anchor="middle">Hiểu</text><rect class="box" x="306" y="154" width="88" height="64" rx="8"/><g class="ico" transform="translate(334.0 162) scale(0.8)"><path d="M6 15h6l9-7v24l-9-7H6z"/><path d="M27 14a8 8 0 0 1 0 12M31 10a13 13 0 0 1 0 20"/></g><text class="t1" x="350.0" y="211.0" text-anchor="middle">Nói</text><path class="wire" d="M96 42H118V114H138"/><path class="wire" d="M96 114H138"/><path class="wire" d="M96 186H118V114"/><path class="wire" d="M262 114H284M284 42V186M284 42H304M284 114H304M284 186H304"/></svg></figure>
+      <div class="case__body">
+        <span class="case__tag">Nhiều robot</span>
+        <h3>Server Xiaozhi riêng của bạn</h3>
+        <p class="case__lead">Phù hợp khi bạn có nhiều robot dùng chung một hệ thống, hoặc muốn tự chọn thành phần nghe, hiểu và nói.</p>
+        <p class="case__k">Mình làm</p>
+        <ul class="ticks">
+            <li>Dựng server Xiaozhi riêng trên máy tính hoặc máy chủ thuê</li>
+            <li>Chọn và nối các thành phần nhận dạng giọng nói, model AI, giọng đọc theo ngân sách</li>
+            <li>Đăng ký và quản lý nhiều robot trên một trang quản trị</li>
+            <li>Bàn giao tài liệu vận hành bằng tiếng Việt</li>
+        </ul>
+        <p class="note">Chi phí chạy model AI và máy chủ thuê do nhà cung cấp tính. Mình báo trước các phương án để bạn chọn.</p>
+      </div>
+    </article>
+    <article class="case">
+      <figure class="case__fig"><svg class="flow" viewBox="0 0 400 250" role="img" aria-label="Sơ đồ: robot 4 chân dùng ESP32-S3 kết nối Xiaozhi, kèm tránh vật cản, chống rơi và lệnh thoại"><rect class="box" x="6" y="14" width="128" height="116" rx="8"/><g class="ico" transform="translate(50.0 26) scale(1.0)"><rect x="7" y="14" width="22" height="10" rx="4"/><rect x="27" y="7" width="10" height="9" rx="3"/><path d="M11 24v10M17 24v10M23 24v10M28 24v10M33 11h.01M7 17l-4-5"/></g><text class="t1" x="70.0" y="83.0" text-anchor="middle">Robot 4 chân</text><text class="t2" x="70.0" y="100.0" text-anchor="middle">ESP32-S3</text><rect class="box box--hot" x="266" y="14" width="128" height="116" rx="8"/><g class="ico" transform="translate(310.0 26) scale(1.0)"><path d="M7 8h26a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H19l-8 7v-7H7a3 3 0 0 1-3-3V11a3 3 0 0 1 3-3z"/><path d="M11 16h18M11 22h10"/></g><text class="t1" x="330.0" y="83.0" text-anchor="middle">Xiaozhi AI</text><text class="t2" x="330.0" y="100.0" text-anchor="middle">nghe, hiểu, nói</text><path class="wire" d="M136 72H264"/><g class="ico" transform="translate(180 22) scale(0.95)"><path d="M5 17a21 21 0 0 1 30 0M11 23a13 13 0 0 1 18 0M16 29a6 6 0 0 1 8 0M20 35h.01"/></g><rect class="box" x="8" y="176" width="120" height="46" rx="8"/><text class="t1" x="68" y="205" text-anchor="middle">Tránh vật cản</text><rect class="box" x="140" y="176" width="120" height="46" rx="8"/><text class="t1" x="200" y="205" text-anchor="middle">Chống rơi</text><rect class="box" x="272" y="176" width="120" height="46" rx="8"/><text class="t1" x="332" y="205" text-anchor="middle">Lệnh thoại</text><path class="wire" d="M70 132V152M70 152H332M70 152V174M200 152V174M332 152V174"/></svg></figure>
+      <div class="case__body">
+        <span class="case__tag">Robot tự chế</span>
+        <h3>Robot dùng <span class="nw">ESP32-S3</span> và Xiaozhi</h3>
+        <p class="case__lead">Phù hợp khi bạn đã có khung robot, ví dụ robot chó 4 chân in 3D, và cần phần mềm để robot nghe lệnh, trả lời và tự di chuyển.</p>
+        <p class="case__k">Mình làm</p>
+        <ul class="ticks">
+            <li>Viết phần mềm cho bo mạch ESP32-S3 kết nối Xiaozhi AI</li>
+            <li>Lập trình tự đi, tránh vật cản, chống rơi mép bàn và các lệnh cơ bản</li>
+            <li>Vẽ sơ đồ đấu nối servo, cảm biến và nguồn</li>
+        </ul>
+        <p class="note">Bạn tự chuẩn bị servo và linh kiện. Mình báo giá phần mềm và sơ đồ đấu nối.</p>
+      </div>
+    </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= XIAOZHI ================= -->
+<section class="sec" id="xiaozhi" aria-labelledby="h-xz">
+  <div class="wrap split split--figure">
+    <figure class="figure">
+      <img src="assets/img/vector/vector-mat.jpg" width="720" height="450" loading="lazy" alt="Cận cảnh mặt robot Vector với hai mắt xanh lá">
+      <figcaption>Robot nghe, Xiaozhi hiểu và trả lời.</figcaption>
+    </figure>
+    <div>
+      <h2 class="h2" id="h-xz">Tích hợp Xiaozhi</h2>
+      <div class="prose lead-prose">
+        <p><b>Xiaozhi</b> là nền tảng trợ lý giọng nói AI mã nguồn mở, ban đầu chạy trên bo mạch ESP32. Robot thu giọng nói, Xiaozhi chuyển thành chữ, nhờ model AI hiểu và trả lời, rồi đọc câu trả lời thành tiếng.</p>
+        <p>Mình đưa Xiaozhi vào robot của bạn theo hai cách:</p>
+      </div>
+      <div class="compare">
+        <div>
+          <h3>Dùng dịch vụ có sẵn</h3>
+          <p>Cài đặt gọn, phù hợp khi bạn muốn thử nhanh hoặc dùng cho một robot.</p>
+        </div>
+        <div>
+          <h3>Server Xiaozhi riêng</h3>
+          <p>Bạn chủ động chọn thành phần nghe, hiểu, nói và quản lý nhiều robot cùng lúc.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUY TRÌNH ================= -->
+<section class="sec sec--panel" id="quy-trinh" aria-labelledby="h-qt">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="h-qt">Cách làm việc</h2>
+      <p>Mỗi bước có đầu ra rõ ràng, bạn biết dự án đang ở đâu.</p>
+    </div>
+    <ol class="steps steps--4" style="list-style:none;padding:0;margin:0">
+      <li class="step"><span class="step__n" aria-hidden="true">1</span><h3>Mô tả nhu cầu</h3><p>Bạn cho mình biết robot, tính năng mong muốn và model AI nếu đã chọn.</p></li>
+      <li class="step"><span class="step__n" aria-hidden="true">2</span><h3>Chốt phương án, báo giá</h3><p>Mình đề xuất cách làm phù hợp, nói rõ phạm vi việc và chi phí.</p></li>
+      <li class="step"><span class="step__n" aria-hidden="true">3</span><h3>Lập trình và thử</h3><p>Mình viết phần mềm, cài đặt và thử cùng robot của bạn.</p></li>
+      <li class="step"><span class="step__n" aria-hidden="true">4</span><h3>Bàn giao, hướng dẫn</h3><p>Bàn giao kèm hướng dẫn sử dụng bằng tiếng Việt.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= CẦN BIẾT ================= -->
+<section class="sec" id="can-biet" aria-labelledby="h-cb">
+  <div class="wrap split">
+    <h2 class="h2" id="h-cb">Để báo giá nhanh, bạn cho mình biết</h2>
+    <ul class="ticks ticks--lg">
+      <li><b>Robot của bạn:</b> Vector 1.0, Vector 2.0 hay robot tự chế.</li>
+      <li><b>Robot cần làm gì:</b> trò chuyện, nhận lệnh, di chuyển, điều khiển thiết bị.</li>
+      <li><b>Model AI mong muốn:</b> Xiaozhi, ChatGPT, DeepSeek, hoặc để mình tư vấn.</li>
+      <li><b>Số lượng robot</b> và nơi đặt server nếu bạn đã có.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= HỎI ĐÁP ================= -->
+<section class="sec sec--panel" id="hoi-dap" aria-labelledby="h-hd">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="h-hd">Câu hỏi thường gặp</h2></div>
+    <div class="faq">
+      <details>
+        <summary>Mình chưa biết nên chọn phương án nào?</summary>
+        <div><p>Bạn mô tả robot đang có và điều bạn muốn robot làm. Mình đề xuất phương án gọn nhất và báo giá trước khi bắt đầu.</p></div>
+      </details>
+      <details>
+        <summary>Vector 2.0 có dùng được không?</summary>
+        <div><p>Phương án server riêng dùng được với cả Vector 1.0 và 2.0. Phương án robot kết nối thẳng tới Xiaozhi hiện áp dụng cho Vector 1.0.</p></div>
+      </details>
+      <details>
+        <summary>Dùng Xiaozhi và model AI có tốn phí không?</summary>
+        <div><p>Xiaozhi là phần mềm mã nguồn mở. Chi phí tùy cách bạn dùng: dịch vụ có sẵn hay server riêng, và model AI bạn chọn có tính phí theo lượng dùng hay không. Mình nói rõ từng phương án khi báo giá.</p></div>
+      </details>
+      <details>
+        <summary>Robot của mình không phải Vector thì sao?</summary>
+        <div><p>Bạn gửi mô tả hoặc ảnh robot. Robot dùng bo mạch ESP32-S3 làm được với Xiaozhi. Với loại khác, mình xem rồi trả lời có làm được không.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GỬI YÊU CẦU ================= -->
+<section class="sec contact on-dark" id="gui-yeu-cau" aria-labelledby="h-gy">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="h-gy">Gửi yêu cầu lập trình AI</h2>
+      <p>Mô tả ngắn robot và điều bạn muốn. Ảnh và video nhắn thêm qua Zalo cho nhanh.</p>
+    </div>
+    <div class="contact__grid">
+      <ul class="info">
+        <li>
+          <span class="info__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></span>
+          <div><span class="info__k">Zalo</span><a class="info__v" href="https://zalo.me/0336341050" target="_blank" rel="noopener">0336 341 050</a></div>
+        </li>
+        <li>
+          <span class="info__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span>
+          <div><span class="info__k">Điện thoại</span><a class="info__v" href="tel:+84336341050">0336 341 050</a></div>
+        </li>
+        <li>
+          <span class="info__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+          <div><span class="info__k">Email</span><a class="info__v" href="mailto:tuancongjr10@gmail.com">tuancongjr10@gmail.com</a></div>
+        </li>
+        <li>
+          <span class="info__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.800 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+          <div><span class="info__k">Địa chỉ</span><span class="info__v info__v--plain">16i, đường Hiệp Thành 13, phường Tân Thới Hiệp, TP Hồ Chí Minh</span><br><a class="info__sub" href="https://www.google.com/maps/search/?api=1&amp;query=16i%20%C4%90%C6%B0%E1%BB%9Dng%20Hi%E1%BB%87p%20Th%C3%A0nh%2013%2C%20T%C3%A2n%20Th%E1%BB%9Bi%20Hi%E1%BB%87p%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh" target="_blank" rel="noopener">Xem trên Google Maps</a></div>
+        </li>
+        <li>
+          <span class="info__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/></svg></span>
+          <div><span class="info__k">YouTube</span><a class="info__v" href="https://www.youtube.com/channel/UCqWKhlzt7eQtGVNYoNAj-9w" target="_blank" rel="noopener">Jr. Automation</a></div>
+        </li>
+        <li>
+          <span class="info__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8.500A.5.5 0 0 1 14.500 8z"/></svg></span>
+          <div><span class="info__k">Facebook</span><a class="info__v" href="https://web.facebook.com/cong.idol.773?locale=vi_VN" target="_blank" rel="noopener">Tuan Cong</a></div>
+        </li>
+      </ul>
+
+      <form class="form" action="https://formsubmit.co/tuancongjr10@gmail.com" method="POST">
+        <h3>Yêu cầu lập trình AI cho robot</h3>
+        <input type="hidden" name="_subject" value="Lập trình AI cho robot từ website Jr. Automation">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://tuancongjr10.github.io/jrautomation/cam-on.html">
+        <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="form__row">
+          <div class="field"><label for="a-ten">Họ và tên</label><input id="a-ten" name="Họ tên" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="a-sdt">Số điện thoại hoặc Zalo</label><input id="a-sdt" name="Điện thoại / Zalo" type="tel" inputmode="tel" autocomplete="tel" required></div>
+        </div>
+        <div class="field">
+          <label for="a-mail">Email (không bắt buộc)</label><input id="a-mail" name="email" type="email" autocomplete="email">
+        </div>
+        <fieldset class="field">
+          <legend>Robot của bạn</legend>
+          <div class="choices">
+            <label class="choice"><input type="radio" name="Robot" value="Vector 1.0" checked><span>Vector 1.0</span></label>
+            <label class="choice"><input type="radio" name="Robot" value="Vector 2.0"><span>Vector 2.0</span></label>
+            <label class="choice"><input type="radio" name="Robot" value="Robot tự chế"><span>Robot tự chế</span></label>
+            <label class="choice"><input type="radio" name="Robot" value="Khác"><span>Khác</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="field">
+          <legend>Bạn quan tâm</legend>
+          <div class="choices">
+            <label class="choice"><input type="checkbox" name="Cần - Server riêng tại nhà" value="Có"><span>Server riêng tại nhà</span></label>
+            <label class="choice"><input type="checkbox" name="Cần - Robot kết nối thẳng Xiaozhi" value="Có"><span>Kết nối thẳng Xiaozhi</span></label>
+            <label class="choice"><input type="checkbox" name="Cần - Server Xiaozhi riêng" value="Có"><span>Server Xiaozhi riêng</span></label>
+            <label class="choice"><input type="checkbox" name="Cần - Robot tự chế ESP32-S3" value="Có"><span>Robot tự chế</span></label>
+            <label class="choice"><input type="checkbox" name="Cần - Việc khác" value="Có"><span>Việc khác</span></label>
+          </div>
+        </fieldset>
+        <div class="field">
+          <label for="a-nd">Bạn muốn robot làm gì</label>
+          <textarea id="a-nd" name="Mô tả yêu cầu" required placeholder="Ví dụ: robot trả lời bằng tiếng Việt, nhận lệnh bật đèn, tự đi và tránh vật cản."></textarea>
+        </div>
+        <div class="form__foot">
+          <button class="btn btn--blue" type="submit">Gửi yêu cầu</button>
+          <span>Mình sẽ liên hệ lại qua số điện thoại hoặc Zalo bạn để lại.</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer on-dark">
+  <div class="wrap">
+    <div class="footer__cols">
+      <div>
+        <a class="brand" href="./" aria-label="Jr. Automation, về trang chủ">
+          <img class="brand__mark" src="assets/img/logo-mark.png" width="33" height="44" alt="">
+          <img class="brand__word" src="assets/img/logo-wordmark.png" width="190" height="16" alt="Jr. Automation">
+        </a>
+        <p class="footer__tag">Robot Vector tiếng Việt, server riêng và phần mềm AI cho robot.</p>
+      </div>
+      <div>
+        <h2>Dịch vụ</h2>
+        <ul>
+          <li><a href="vector-store.html">Vector Robot Store</a></li>
+          <li><a href="vector-server.html">Vector Repair &amp; Server</a></li>
+          <li><a href="lap-trinh-ai.html">Lập trình AI cho robot</a></li>
+          <li><a href="kien-thuc.html">Kiến thức &amp; YouTube</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Liên hệ</h2>
+        <ul>
+          <li><a href="https://zalo.me/0336341050" target="_blank" rel="noopener">Zalo 0336 341 050</a></li>
+          <li><a href="mailto:tuancongjr10@gmail.com">tuancongjr10@gmail.com</a></li>
+          <li><a href="https://www.youtube.com/channel/UCqWKhlzt7eQtGVNYoNAj-9w" target="_blank" rel="noopener">YouTube Jr. Automation</a></li>
+          <li><a href="https://web.facebook.com/cong.idol.773?locale=vi_VN" target="_blank" rel="noopener">Facebook Tuan Cong</a></li>
+          <li><a href="lien-he.html">Gửi yêu cầu</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__copy">© 2026 Tuan Cong Jr. Robot Vector, server và phần mềm AI cho robot tại TP Hồ Chí Minh. Zalo và điện thoại 0336 341 050, email tuancongjr10@gmail.com.</p>
+  </div>
+</footer>
+
+<!-- Thanh liên hệ nhanh trên điện thoại -->
+<div class="mbar on-dark">
+  <a class="btn btn--ghost" href="tel:+84336341050">Gọi ngay</a>
+  <a class="btn btn--amber" href="https://zalo.me/0336341050" target="_blank" rel="noopener">Nhắn Zalo</a>
+</div>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

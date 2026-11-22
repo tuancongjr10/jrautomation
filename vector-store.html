@@ -45,8 +45,7 @@
         <li><a href="./">Trang chủ</a></li>
         <li><a href="vector-store.html" aria-current="page">Vector Store</a></li>
         <li><a href="vector-server.html">Vector Repair &amp; Server</a></li>
-        <li><a href="nachi.html">NACHI</a></li>
-        <li><a href="plc-hmi.html">PLC &amp; HMI</a></li>
+        <li><a href="lap-trinh-ai.html">Lập trình AI</a></li>
         <li><a href="kien-thuc.html">Kiến thức</a></li>
         <li><a class="btn btn--amber btn--sm" href="lien-he.html">Liên hệ</a></li>
       </ul>
@@ -149,6 +148,7 @@
     </div>
     <div class="plans plans--3">
       <article class="plan">
+        <div class="plan__media"><img src="assets/img/vector/vector-mat.jpg" width="720" height="450" loading="lazy" alt="Cận cảnh mặt robot Vector với hai mắt xanh lá"></div>
         <span class="plan__who">Bạn chưa có Vector</span>
         <h3>Mua robot cài sẵn</h3>
         <p class="plan__price plan__price--text">Giá: liên hệ báo giá</p>
@@ -162,6 +162,7 @@
         <a class="btn btn--blue" href="#dat-mua" data-pick="Mua robot cài sẵn">Chọn cách này</a>
       </article>
       <article class="plan plan--amber">
+        <div class="plan__media"><svg class="flow" viewBox="0 0 400 250" role="img" aria-label="Sơ đồ: robot Vector gửi giọng nói tới server riêng tại nhà, server chuyển câu hỏi cho model AI"><rect class="box" x="8" y="28" width="100" height="118" rx="8"/><g class="ico" transform="translate(38.0 40) scale(1.0)"><rect x="4" y="9" width="32" height="22" rx="8"/><rect x="13" y="16" width="5" height="7" rx="1.5"/><rect x="22" y="16" width="5" height="7" rx="1.5"/><path d="M9 35h22"/></g><text class="t1" x="58.0" y="97.0" text-anchor="middle">Vector</text><text class="t2" x="58.0" y="114.0" text-anchor="middle">1.0 và 2.0</text><rect class="box box--hot" x="150" y="28" width="100" height="118" rx="8"/><g class="ico" transform="translate(180.0 40) scale(1.0)"><rect x="4" y="6" width="32" height="12" rx="3"/><rect x="4" y="22" width="32" height="12" rx="3"/><path d="M10 12h.01M10 28h.01M16 12h14M16 28h14"/></g><text class="t1" x="200.0" y="97.0" text-anchor="middle">Server riêng</text><text class="t2" x="200.0" y="114.0" text-anchor="middle">tại nhà</text><rect class="box" x="292" y="28" width="100" height="118" rx="8"/><g class="ico" transform="translate(322.0 40) scale(1.0)"><path d="M16 6a5 5 0 0 0-5 5 5 5 0 0 0-3 8 5 5 0 0 0 3 8 5 5 0 0 0 9 3V9a5 5 0 0 0-4-3zM24 6a5 5 0 0 1 5 5 5 5 0 0 1 3 8 5 5 0 0 1-3 8 5 5 0 0 1-9 3"/></g><text class="t1" x="342.0" y="97.0" text-anchor="middle">Model AI</text><text class="t2" x="342.0" y="114.0" text-anchor="middle">bạn chọn</text><path class="wire" d="M110 87H148"/><path class="wire" d="M252 87H290"/><text class="t2" x="200" y="188" text-anchor="middle">máy tính cũ hoặc Raspberry Pi</text><text class="t2" x="200" y="208" text-anchor="middle">cùng mạng với robot</text></svg></div>
         <span class="plan__who">Bạn đã có Vector</span>
         <h3>Nâng cấp robot của bạn</h3>
         <p class="plan__price plan__price--text">Giá: liên hệ báo giá</p>
@@ -174,6 +175,7 @@
         <a class="btn btn--blue" href="#dat-mua" data-pick="Nâng cấp robot của mình">Chọn cách này</a>
       </article>
       <article class="plan">
+        <div class="plan__media"><img src="assets/img/vector/vector-banh-xich.jpg" width="750" height="468" loading="lazy" alt="Cận cảnh bánh xích và khung robot Vector"></div>
         <span class="plan__who">Vector của bạn bị lỗi</span>
         <h3>Sửa chữa và cài lại server</h3>
         <p class="plan__price plan__price--text">Giá: báo theo tình trạng</p>
@@ -196,6 +198,10 @@
       <details>
         <summary>Vector AI khác gì Vector bình thường?</summary>
         <div><p>Vector gốc không có sẵn tiếng Việt và cần máy chủ để nghe lệnh. Vector AI thêm giọng nói tiếng Việt, cho robot trò chuyện với model AI, và chạy qua server riêng nên không phụ thuộc hãng.</p></div>
+      </details>
+      <details>
+        <summary>Xiaozhi là gì, Vector có dùng được không?</summary>
+        <div><p>Xiaozhi là nền tảng trợ lý giọng nói AI mã nguồn mở. Mình có thể nối Vector với Xiaozhi để robot nghe, hiểu và trả lời. Xem các cách làm ở trang <a href="lap-trinh-ai.html#xiaozhi">Lập trình AI cho robot</a>.</p></div>
       </details>
       <details>
         <summary>Server riêng là gì, vì sao cần?</summary>
@@ -307,15 +313,14 @@
           <img class="brand__mark" src="assets/img/logo-mark.png" width="33" height="44" alt="">
           <img class="brand__word" src="assets/img/logo-wordmark.png" width="190" height="16" alt="Jr. Automation">
         </a>
-        <p class="footer__tag">Giải pháp robot, tự động hóa công nghiệp và AI ứng dụng.</p>
+        <p class="footer__tag">Robot Vector tiếng Việt, server riêng và phần mềm AI cho robot.</p>
       </div>
       <div>
         <h2>Dịch vụ</h2>
         <ul>
           <li><a href="vector-store.html">Vector Robot Store</a></li>
           <li><a href="vector-server.html">Vector Repair &amp; Server</a></li>
-          <li><a href="nachi.html">NACHI Robotics</a></li>
-          <li><a href="plc-hmi.html">PLC &amp; HMI Services</a></li>
+          <li><a href="lap-trinh-ai.html">Lập trình AI cho robot</a></li>
           <li><a href="kien-thuc.html">Kiến thức &amp; YouTube</a></li>
         </ul>
       </div>
@@ -330,7 +335,7 @@
         </ul>
       </div>
     </div>
-    <p class="footer__copy">© 2026 Tuan Cong Jr. Robot, tự động hóa và AI ứng dụng tại TP Hồ Chí Minh. Zalo và điện thoại 0336 341 050, email tuancongjr10@gmail.com.</p>
+    <p class="footer__copy">© 2026 Tuan Cong Jr. Robot Vector, server và phần mềm AI cho robot tại TP Hồ Chí Minh. Zalo và điện thoại 0336 341 050, email tuancongjr10@gmail.com.</p>
   </div>
 </footer>
 

@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kiến thức &amp; YouTube | Kênh Jr. Automation về PLC, robot và AI</title>
-<meta name="description" content="Kiến thức ngắn về PLC, HMI, robot và AI ứng dụng, cùng kênh YouTube Jr. Automation về tự động hóa công nghiệp.">
+<title>Kiến thức &amp; YouTube | Kênh Jr. Automation về robot, AI và tự động hóa</title>
+<meta name="description" content="Kiến thức ngắn về robot Vector, server riêng, Xiaozhi và AI cho robot, cùng kênh YouTube Jr. Automation.">
 <meta name="author" content="Tuan Cong Jr">
 <meta name="theme-color" content="#0B2A55">
 <link rel="canonical" href="https://tuancongjr10.github.io/jrautomation/kien-thuc.html">
@@ -15,8 +15,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="vi_VN">
 <meta property="og:site_name" content="Jr. Automation">
-<meta property="og:title" content="Kiến thức &amp; YouTube | Kênh Jr. Automation về PLC, robot và AI">
-<meta property="og:description" content="Kiến thức ngắn về PLC, HMI, robot và AI ứng dụng, cùng kênh YouTube Jr. Automation về tự động hóa công nghiệp.">
+<meta property="og:title" content="Kiến thức &amp; YouTube | Kênh Jr. Automation về robot, AI và tự động hóa">
+<meta property="og:description" content="Kiến thức ngắn về robot Vector, server riêng, Xiaozhi và AI cho robot, cùng kênh YouTube Jr. Automation.">
 <meta property="og:url" content="https://tuancongjr10.github.io/jrautomation/kien-thuc.html">
 <meta property="og:image" content="https://tuancongjr10.github.io/jrautomation/assets/img/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -45,8 +45,7 @@
         <li><a href="./">Trang chủ</a></li>
         <li><a href="vector-store.html">Vector Store</a></li>
         <li><a href="vector-server.html">Vector Repair &amp; Server</a></li>
-        <li><a href="nachi.html">NACHI</a></li>
-        <li><a href="plc-hmi.html">PLC &amp; HMI</a></li>
+        <li><a href="lap-trinh-ai.html">Lập trình AI</a></li>
         <li><a href="kien-thuc.html" aria-current="page">Kiến thức</a></li>
         <li><a class="btn btn--amber btn--sm" href="lien-he.html">Liên hệ</a></li>
       </ul>
@@ -60,7 +59,7 @@
   <div class="wrap hero__grid">
     <div class="hero__text">
       <h1 id="h1">Kiến thức và kênh YouTube Jr.&nbsp;Automation</h1>
-      <p class="hero__lead">Kiến thức ngắn gọn về PLC, robot và AI ứng dụng, cùng kênh YouTube Jr. Automation về tự động hóa công nghiệp, robot và AI.</p>
+      <p class="hero__lead">Kiến thức ngắn gọn về robot Vector, server riêng, Xiaozhi và AI cho robot, cùng kênh YouTube Jr. Automation về tự động hóa, robot và AI.</p>
       <div class="hero__cta">
         <a class="btn btn--amber" href="https://www.youtube.com/channel/UCqWKhlzt7eQtGVNYoNAj-9w" target="_blank" rel="noopener">Xem kênh YouTube</a>
         <a class="btn btn--ghost" href="#kien-thuc">Đọc kiến thức</a>
@@ -71,7 +70,7 @@
       <div class="yt">
         <div class="yt__top">
           <img src="assets/img/logo-mark.png" width="57" height="76" alt="">
-          <div><p class="yt__name">Jr. Automation</p><p class="yt__sub">Kênh YouTube về tự động hóa công nghiệp, robot và AI</p></div>
+          <div><p class="yt__name">Jr. Automation</p><p class="yt__sub">Kênh YouTube về tự động hóa, robot và AI</p></div>
         </div>
         <div class="yt__play" aria-hidden="true"><svg viewBox="0 0 84 84" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"><rect x="6" y="16" width="72" height="52" rx="14"/><path d="M34 31l22 11-22 11z" fill="currentColor"/></svg></div>
         <a class="btn btn--ghost" href="https://www.youtube.com/channel/UCqWKhlzt7eQtGVNYoNAj-9w" target="_blank" rel="noopener">Mở kênh trên YouTube</a>
@@ -87,28 +86,41 @@
       <h2 id="h-kt">Kiến thức nhanh</h2>
       <p>Bốn chủ đề mình hay được hỏi. Mỗi mục đọc dưới một phút.</p>
     </div>
-    <div class="bento">
-      <article class="tile tile--half tile--blue">
-        <svg class="tile__icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M2 16h10M12 6v20M20 6v20M20 16h10"/></svg>
-        <h3>Mạch tự giữ START và STOP</h3>
-        <p>Bài nền tảng của mọi chương trình PLC. Nhấn START cấp điện cho cuộn dây Q0.0, tiếp điểm Q0.0 mắc song song với START giữ mạch sau khi nhả tay, nút STOP thường đóng cắt mạch khi nhấn.</p>
-        <div class="tile__foot"><a class="tile__go" href="plc-hmi.html#top">Thử mô phỏng ở trang PLC &amp; HMI</a></div>
+    <div class="svc-grid">
+      <article class="svc">
+        <div class="svc__media"><img src="assets/img/vector/vector-hero.jpg" width="782" height="635" loading="lazy" alt="Robot Anki Vector màu đen, đôi mắt xanh lá, đặt trên bàn làm việc"></div>
+        <div class="svc__body">
+          <h3>Vector là robot gì</h3>
+          <p>Vector là robot để bàn do Anki thiết kế, có camera, micro và màn hình mặt biểu cảm. Anki ngừng hoạt động năm 2019, sau đó Digital Dream Labs mua lại tài sản liên quan.</p>
+          <div class="tile__foot"><a class="tile__go" href="vector-store.html#vector-ai">Xem Vector AI</a></div>
+        </div>
       </article>
-      <article class="tile tile--half">
-        <svg class="tile__icon" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="4" width="26" height="18" rx="2"/><path d="M10 28h12M16 22v6M8 11h7M8 16h11"/></svg>
-        <h3>PLC, HMI và robot khác nhau thế nào</h3>
-        <p>PLC là bộ điều khiển logic của máy. HMI là màn hình để người vận hành bấm nút và xem trạng thái. Robot công nghiệp, như cánh tay NACHI, là cơ cấu chấp hành, thường có bộ điều khiển riêng và trao đổi tín hiệu với PLC.</p>
+
+      <article class="svc">
+        <div class="svc__media"><svg class="flow" viewBox="0 0 400 250" role="img" aria-label="Sơ đồ: robot Vector gửi giọng nói tới server riêng tại nhà, server chuyển câu hỏi cho model AI"><rect class="box" x="8" y="28" width="100" height="118" rx="8"/><g class="ico" transform="translate(38.0 40) scale(1.0)"><rect x="4" y="9" width="32" height="22" rx="8"/><rect x="13" y="16" width="5" height="7" rx="1.5"/><rect x="22" y="16" width="5" height="7" rx="1.5"/><path d="M9 35h22"/></g><text class="t1" x="58.0" y="97.0" text-anchor="middle">Vector</text><text class="t2" x="58.0" y="114.0" text-anchor="middle">1.0 và 2.0</text><rect class="box box--hot" x="150" y="28" width="100" height="118" rx="8"/><g class="ico" transform="translate(180.0 40) scale(1.0)"><rect x="4" y="6" width="32" height="12" rx="3"/><rect x="4" y="22" width="32" height="12" rx="3"/><path d="M10 12h.01M10 28h.01M16 12h14M16 28h14"/></g><text class="t1" x="200.0" y="97.0" text-anchor="middle">Server riêng</text><text class="t2" x="200.0" y="114.0" text-anchor="middle">tại nhà</text><rect class="box" x="292" y="28" width="100" height="118" rx="8"/><g class="ico" transform="translate(322.0 40) scale(1.0)"><path d="M16 6a5 5 0 0 0-5 5 5 5 0 0 0-3 8 5 5 0 0 0 3 8 5 5 0 0 0 9 3V9a5 5 0 0 0-4-3zM24 6a5 5 0 0 1 5 5 5 5 0 0 1 3 8 5 5 0 0 1-3 8 5 5 0 0 1-9 3"/></g><text class="t1" x="342.0" y="97.0" text-anchor="middle">Model AI</text><text class="t2" x="342.0" y="114.0" text-anchor="middle">bạn chọn</text><path class="wire" d="M110 87H148"/><path class="wire" d="M252 87H290"/><text class="t2" x="200" y="188" text-anchor="middle">máy tính cũ hoặc Raspberry Pi</text><text class="t2" x="200" y="208" text-anchor="middle">cùng mạng với robot</text></svg></div>
+        <div class="svc__body">
+          <h3>Server riêng là gì</h3>
+          <p>Vector gửi giọng nói lên một máy chủ để hiểu lệnh. Server riêng thay máy chủ đó, giúp robot nghe lệnh trở lại và nối được với model AI.</p>
+          <div class="tile__foot"><a class="tile__go" href="vector-server.html#server-la-gi">Đọc phần giải thích đầy đủ</a></div>
+        </div>
       </article>
-      <article class="tile tile--half">
-        <svg class="tile__icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 5 3 11l13 6 13-6z"/><path d="M8 14v7c0 2 4 4 8 4s8-2 8-4v-7"/></svg>
-        <h3>Học lập trình PLC từ đâu</h3>
-        <p>Bắt đầu từ ladder cơ bản: tự giữ, timer, counter. Chưa có PLC thì thực hành bằng trình mô phỏng PLCSIM. Khi vững, làm một mô hình băng tải nhỏ có cảm biến và nút nhấn.</p>
+
+      <article class="svc svc--amber">
+        <div class="svc__media"><svg class="flow" viewBox="0 0 400 250" role="img" aria-label="Sơ đồ: nhiều robot nối vào một server Xiaozhi riêng, server dùng ba thành phần nghe, hiểu và nói"><rect class="box" x="6" y="10" width="88" height="64" rx="8"/><g class="ico" transform="translate(34.0 18) scale(0.8)"><rect x="4" y="9" width="32" height="22" rx="8"/><rect x="13" y="16" width="5" height="7" rx="1.5"/><rect x="22" y="16" width="5" height="7" rx="1.5"/><path d="M9 35h22"/></g><text class="t1" x="50.0" y="67.0" text-anchor="middle">Robot 1</text><rect class="box" x="6" y="82" width="88" height="64" rx="8"/><g class="ico" transform="translate(34.0 90) scale(0.8)"><rect x="4" y="9" width="32" height="22" rx="8"/><rect x="13" y="16" width="5" height="7" rx="1.5"/><rect x="22" y="16" width="5" height="7" rx="1.5"/><path d="M9 35h22"/></g><text class="t1" x="50.0" y="139.0" text-anchor="middle">Robot 2</text><rect class="box" x="6" y="154" width="88" height="64" rx="8"/><g class="ico" transform="translate(34.0 162) scale(0.8)"><rect x="4" y="9" width="32" height="22" rx="8"/><rect x="13" y="16" width="5" height="7" rx="1.5"/><rect x="22" y="16" width="5" height="7" rx="1.5"/><path d="M9 35h22"/></g><text class="t1" x="50.0" y="211.0" text-anchor="middle">Robot 3</text><rect class="box box--hot" x="140" y="29" width="120" height="170" rx="8"/><g class="ico" transform="translate(180.0 41) scale(1.0)"><rect x="4" y="6" width="32" height="12" rx="3"/><rect x="4" y="22" width="32" height="12" rx="3"/><path d="M10 12h.01M10 28h.01M16 12h14M16 28h14"/></g><text class="t1" x="200.0" y="98.0" text-anchor="middle">Server Xiaozhi</text><text class="t2" x="200.0" y="115.0" text-anchor="middle">riêng của bạn</text><rect class="box" x="306" y="10" width="88" height="64" rx="8"/><g class="ico" transform="translate(334.0 18) scale(0.8)"><path d="M10 16a10 10 0 0 1 20 0c0 6-6 7-6 12a5 5 0 0 1-10 0"/><path d="M16 16a4 4 0 0 1 8 0"/></g><text class="t1" x="350.0" y="67.0" text-anchor="middle">Nghe</text><rect class="box" x="306" y="82" width="88" height="64" rx="8"/><g class="ico" transform="translate(334.0 90) scale(0.8)"><path d="M16 6a5 5 0 0 0-5 5 5 5 0 0 0-3 8 5 5 0 0 0 3 8 5 5 0 0 0 9 3V9a5 5 0 0 0-4-3zM24 6a5 5 0 0 1 5 5 5 5 0 0 1 3 8 5 5 0 0 1-3 8 5 5 0 0 1-9 3"/></g><text class="t1" x="350.0" y="139.0" text-anchor="middle">Hiểu</text><rect class="box" x="306" y="154" width="88" height="64" rx="8"/><g class="ico" transform="translate(334.0 162) scale(0.8)"><path d="M6 15h6l9-7v24l-9-7H6z"/><path d="M27 14a8 8 0 0 1 0 12M31 10a13 13 0 0 1 0 20"/></g><text class="t1" x="350.0" y="211.0" text-anchor="middle">Nói</text><path class="wire" d="M96 42H118V114H138"/><path class="wire" d="M96 114H138"/><path class="wire" d="M96 186H118V114"/><path class="wire" d="M262 114H284M284 42V186M284 42H304M284 114H304M284 186H304"/></svg></div>
+        <div class="svc__body">
+          <h3>Xiaozhi là gì</h3>
+          <p>Xiaozhi là nền tảng trợ lý giọng nói AI mã nguồn mở. Robot thu giọng nói, Xiaozhi chuyển thành chữ, nhờ model AI trả lời rồi đọc thành tiếng.</p>
+          <div class="tile__foot"><a class="tile__go" href="lap-trinh-ai.html#xiaozhi">Xem cách tích hợp</a></div>
+        </div>
       </article>
-      <article class="tile tile--half tile--amber">
-        <svg class="tile__icon" viewBox="0 0 32 32" aria-hidden="true" style="color:#8A6200"><rect x="5" y="10" width="22" height="16" rx="4"/><path d="M16 10V5M13 5h6M11 18h.01M21 18h.01M12 22h8"/></svg>
-        <h3>Vector và server riêng</h3>
-        <p>Vector cần máy chủ để nghe lệnh giọng nói. Server riêng như Wire-Pod giúp robot chạy lại và nối được với model AI để trò chuyện.</p>
-        <div class="tile__foot"><a class="tile__go" href="vector-server.html#server-la-gi">Đọc phần giải thích đầy đủ</a></div>
+
+      <article class="svc">
+        <div class="svc__media"><svg class="flow" viewBox="0 0 400 250" role="img" aria-label="Sơ đồ: phần mềm AI do mình lập trình nằm giữa robot và các model như Xiaozhi, ChatGPT, DeepSeek"><rect class="box" x="4" y="80" width="86" height="94" rx="8"/><g class="ico" transform="translate(27.0 92) scale(1.0)"><rect x="4" y="9" width="32" height="22" rx="8"/><rect x="13" y="16" width="5" height="7" rx="1.5"/><rect x="22" y="16" width="5" height="7" rx="1.5"/><path d="M9 35h22"/></g><text class="t1" x="47.0" y="149.0" text-anchor="middle">Robot</text><rect class="box box--hot" x="120" y="30" width="160" height="194" rx="8"/><g class="ico" transform="translate(180.0 42) scale(1.0)"><path d="M14 11 5 20l9 9M26 11l9 9-9 9M23 8l-6 24"/></g><text class="t1" x="200.0" y="99.0" text-anchor="middle">Phần mềm AI</text><text class="t2" x="200.0" y="116.0" text-anchor="middle">do mình lập trình</text><text class="t2" x="200" y="160" text-anchor="middle">giọng nói tiếng Việt</text><text class="t2" x="200" y="182" text-anchor="middle">lệnh thoại riêng</text><text class="t2" x="200" y="204" text-anchor="middle">điều khiển thiết bị</text><rect class="box" x="308" y="14" width="88" height="62" rx="8"/><text class="t1" x="352" y="51" text-anchor="middle">Xiaozhi</text><rect class="box" x="308" y="94" width="88" height="62" rx="8"/><text class="t1" x="352" y="131" text-anchor="middle">ChatGPT</text><rect class="box" x="308" y="174" width="88" height="62" rx="8"/><text class="t1" x="352" y="211" text-anchor="middle">DeepSeek</text><path class="wire" d="M92 127H118"/><path class="wire" d="M282 127H296M296 45V205M296 45H306M296 125H306M296 205H306"/></svg></div>
+        <div class="svc__body">
+          <h3>Chọn model AI nào cho robot</h3>
+          <p>ChatGPT, DeepSeek và Xiaozhi khác nhau về chi phí, tốc độ và chất lượng tiếng Việt. Mình tư vấn theo ngân sách và việc bạn muốn robot làm.</p>
+          <div class="tile__foot"><a class="tile__go" href="lien-he.html?dv=ai#form">Nhờ mình tư vấn</a></div>
+        </div>
       </article>
     </div>
   </div>
@@ -138,15 +150,14 @@
           <img class="brand__mark" src="assets/img/logo-mark.png" width="33" height="44" alt="">
           <img class="brand__word" src="assets/img/logo-wordmark.png" width="190" height="16" alt="Jr. Automation">
         </a>
-        <p class="footer__tag">Giải pháp robot, tự động hóa công nghiệp và AI ứng dụng.</p>
+        <p class="footer__tag">Robot Vector tiếng Việt, server riêng và phần mềm AI cho robot.</p>
       </div>
       <div>
         <h2>Dịch vụ</h2>
         <ul>
           <li><a href="vector-store.html">Vector Robot Store</a></li>
           <li><a href="vector-server.html">Vector Repair &amp; Server</a></li>
-          <li><a href="nachi.html">NACHI Robotics</a></li>
-          <li><a href="plc-hmi.html">PLC &amp; HMI Services</a></li>
+          <li><a href="lap-trinh-ai.html">Lập trình AI cho robot</a></li>
           <li><a href="kien-thuc.html">Kiến thức &amp; YouTube</a></li>
         </ul>
       </div>
@@ -161,7 +172,7 @@
         </ul>
       </div>
     </div>
-    <p class="footer__copy">© 2026 Tuan Cong Jr. Robot, tự động hóa và AI ứng dụng tại TP Hồ Chí Minh. Zalo và điện thoại 0336 341 050, email tuancongjr10@gmail.com.</p>
+    <p class="footer__copy">© 2026 Tuan Cong Jr. Robot Vector, server và phần mềm AI cho robot tại TP Hồ Chí Minh. Zalo và điện thoại 0336 341 050, email tuancongjr10@gmail.com.</p>
   </div>
 </footer>
 

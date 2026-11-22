@@ -45,8 +45,7 @@
         <li><a href="./">Trang chủ</a></li>
         <li><a href="vector-store.html">Vector Store</a></li>
         <li><a href="vector-server.html" aria-current="page">Vector Repair &amp; Server</a></li>
-        <li><a href="nachi.html">NACHI</a></li>
-        <li><a href="plc-hmi.html">PLC &amp; HMI</a></li>
+        <li><a href="lap-trinh-ai.html">Lập trình AI</a></li>
         <li><a href="kien-thuc.html">Kiến thức</a></li>
         <li><a class="btn btn--amber btn--sm" href="lien-he.html">Liên hệ</a></li>
       </ul>
@@ -128,28 +127,41 @@
       <h2 id="h-dv">Bốn việc mình làm</h2>
       <p>Chọn một hoặc nhiều việc. Mình báo giá theo đúng phần bạn cần.</p>
     </div>
-    <div class="bento">
-      <article class="tile tile--half tile--blue">
-        <svg class="tile__icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M20 5a6 6 0 0 0-5.5 8L5 22.500 9.500 27 19 17.500A6 6 0 0 0 27 12l-4 4-4-1-1-4 4-4a6 6 0 0 0-2-2z"/></svg>
-        <h3>Sửa chữa phần cứng</h3>
-        <p>Robot Vector bị lỗi pin, không di chuyển được, hỏng màn hình hay không sạc được.</p>
-        <div class="chips"><span class="chip">Pin</span><span class="chip">Di chuyển</span><span class="chip">Màn hình</span><span class="chip">Sạc</span></div>
+    <div class="svc-grid">
+      <article class="svc">
+        <div class="svc__media"><img src="assets/img/vector/vector-banh-xich.jpg" width="750" height="468" loading="lazy" alt="Cận cảnh bánh xích và khung robot Vector"></div>
+        <div class="svc__body">
+          <h3>Sửa chữa phần cứng</h3>
+          <p>Robot Vector bị lỗi pin, không di chuyển được, hỏng màn hình hay không sạc được.</p>
+          <div class="tile__foot"><div class="chips"><span class="chip">Pin</span><span class="chip">Di chuyển</span><span class="chip">Màn hình</span><span class="chip">Sạc</span></div></div>
+        </div>
       </article>
-      <article class="tile tile--half">
-        <svg class="tile__icon" viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="5" width="24" height="8" rx="2"/><rect x="4" y="19" width="24" height="8" rx="2"/><path d="M9 9h.01M9 23h.01M14 9h10M14 23h10"/></svg>
-        <h3>Cài và cấu hình server</h3>
-        <p>Cài máy chủ riêng để Vector chạy lại, không phụ thuộc máy chủ của hãng.</p>
+
+      <article class="svc">
+        <div class="svc__media"><svg class="flow" viewBox="0 0 400 250" role="img" aria-label="Sơ đồ: robot Vector gửi giọng nói tới server riêng tại nhà, server chuyển câu hỏi cho model AI"><rect class="box" x="8" y="28" width="100" height="118" rx="8"/><g class="ico" transform="translate(38.0 40) scale(1.0)"><rect x="4" y="9" width="32" height="22" rx="8"/><rect x="13" y="16" width="5" height="7" rx="1.5"/><rect x="22" y="16" width="5" height="7" rx="1.5"/><path d="M9 35h22"/></g><text class="t1" x="58.0" y="97.0" text-anchor="middle">Vector</text><text class="t2" x="58.0" y="114.0" text-anchor="middle">1.0 và 2.0</text><rect class="box box--hot" x="150" y="28" width="100" height="118" rx="8"/><g class="ico" transform="translate(180.0 40) scale(1.0)"><rect x="4" y="6" width="32" height="12" rx="3"/><rect x="4" y="22" width="32" height="12" rx="3"/><path d="M10 12h.01M10 28h.01M16 12h14M16 28h14"/></g><text class="t1" x="200.0" y="97.0" text-anchor="middle">Server riêng</text><text class="t2" x="200.0" y="114.0" text-anchor="middle">tại nhà</text><rect class="box" x="292" y="28" width="100" height="118" rx="8"/><g class="ico" transform="translate(322.0 40) scale(1.0)"><path d="M16 6a5 5 0 0 0-5 5 5 5 0 0 0-3 8 5 5 0 0 0 3 8 5 5 0 0 0 9 3V9a5 5 0 0 0-4-3zM24 6a5 5 0 0 1 5 5 5 5 0 0 1 3 8 5 5 0 0 1-3 8 5 5 0 0 1-9 3"/></g><text class="t1" x="342.0" y="97.0" text-anchor="middle">Model AI</text><text class="t2" x="342.0" y="114.0" text-anchor="middle">bạn chọn</text><path class="wire" d="M110 87H148"/><path class="wire" d="M252 87H290"/><text class="t2" x="200" y="188" text-anchor="middle">máy tính cũ hoặc Raspberry Pi</text><text class="t2" x="200" y="208" text-anchor="middle">cùng mạng với robot</text></svg></div>
+        <div class="svc__body">
+          <h3>Cài và cấu hình server</h3>
+          <p>Cài máy chủ riêng để Vector chạy lại, không phụ thuộc máy chủ của hãng.</p>
+          <div class="tile__foot"><a class="tile__go" href="#server-la-gi">Server riêng là gì?</a></div>
+        </div>
       </article>
-      <article class="tile tile--half">
-        <svg class="tile__icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 7h22v14H15l-6 5v-5H5z"/><path d="M10 12h12M10 16h7"/></svg>
-        <h3>Kết nối AI</h3>
-        <p>Nối Vector với ChatGPT, DeepSeek, Xiaozhi hoặc model khác để trò chuyện tự nhiên.</p>
-        <div class="chips"><span class="chip">ChatGPT</span><span class="chip">DeepSeek</span><span class="chip">Xiaozhi</span></div>
+
+      <article class="svc">
+        <div class="svc__media"><svg class="flow" viewBox="0 0 400 250" role="img" aria-label="Sơ đồ: phần mềm AI do mình lập trình nằm giữa robot và các model như Xiaozhi, ChatGPT, DeepSeek"><rect class="box" x="4" y="80" width="86" height="94" rx="8"/><g class="ico" transform="translate(27.0 92) scale(1.0)"><rect x="4" y="9" width="32" height="22" rx="8"/><rect x="13" y="16" width="5" height="7" rx="1.5"/><rect x="22" y="16" width="5" height="7" rx="1.5"/><path d="M9 35h22"/></g><text class="t1" x="47.0" y="149.0" text-anchor="middle">Robot</text><rect class="box box--hot" x="120" y="30" width="160" height="194" rx="8"/><g class="ico" transform="translate(180.0 42) scale(1.0)"><path d="M14 11 5 20l9 9M26 11l9 9-9 9M23 8l-6 24"/></g><text class="t1" x="200.0" y="99.0" text-anchor="middle">Phần mềm AI</text><text class="t2" x="200.0" y="116.0" text-anchor="middle">do mình lập trình</text><text class="t2" x="200" y="160" text-anchor="middle">giọng nói tiếng Việt</text><text class="t2" x="200" y="182" text-anchor="middle">lệnh thoại riêng</text><text class="t2" x="200" y="204" text-anchor="middle">điều khiển thiết bị</text><rect class="box" x="308" y="14" width="88" height="62" rx="8"/><text class="t1" x="352" y="51" text-anchor="middle">Xiaozhi</text><rect class="box" x="308" y="94" width="88" height="62" rx="8"/><text class="t1" x="352" y="131" text-anchor="middle">ChatGPT</text><rect class="box" x="308" y="174" width="88" height="62" rx="8"/><text class="t1" x="352" y="211" text-anchor="middle">DeepSeek</text><path class="wire" d="M92 127H118"/><path class="wire" d="M282 127H296M296 45V205M296 45H306M296 125H306M296 205H306"/></svg></div>
+        <div class="svc__body">
+          <h3>Kết nối AI</h3>
+          <p>Nối Vector với ChatGPT, DeepSeek, Xiaozhi hoặc model khác để trò chuyện tự nhiên.</p>
+          <div class="tile__foot"><div class="chips"><span class="chip">ChatGPT</span><span class="chip">DeepSeek</span><span class="chip">Xiaozhi</span></div></div>
+        </div>
       </article>
-      <article class="tile tile--half tile--amber">
-        <svg class="tile__icon" viewBox="0 0 32 32" aria-hidden="true" style="color:#8A6200"><path d="M16 4a5 5 0 0 0-5 5v7a5 5 0 0 0 10 0V9a5 5 0 0 0-5-5z"/><path d="M7 15a9 9 0 0 0 18 0M16 24v4M11 28h10"/></svg>
-        <h3>Việt hóa giọng nói</h3>
-        <p>Vector nghe và nói tiếng Việt.</p>
+
+      <article class="svc svc--amber">
+        <div class="svc__media"><img src="assets/img/vector/vector-mat.jpg" width="720" height="450" loading="lazy" alt="Cận cảnh mặt robot Vector với hai mắt xanh lá"></div>
+        <div class="svc__body">
+          <h3>Việt hóa giọng nói</h3>
+          <p>Vector nghe và nói tiếng Việt, kèm hướng dẫn sử dụng bằng tiếng Việt.</p>
+          <div class="tile__foot"></div>
+        </div>
       </article>
     </div>
   </div>
@@ -196,6 +208,20 @@
       <li class="step"><span class="step__n" aria-hidden="true">3</span><h3>Thực hiện</h3><p>Sửa phần cứng hoặc cài server, tiếng Việt, AI theo phạm vi đã chốt.</p></li>
       <li class="step"><span class="step__n" aria-hidden="true">4</span><h3>Chạy thử và bàn giao</h3><p>Thử các lệnh cùng bạn rồi mới bàn giao.</p></li>
     </ol>
+  </div>
+</section>
+
+<!-- ================= VÍ DỤ TRIỂN KHAI ================= -->
+<section class="sec" id="vi-du-server" aria-labelledby="h-vd">
+  <div class="wrap split split--figure">
+    <div class="stage" style="padding:12px"><svg class="flow" viewBox="0 0 400 250" role="img" aria-label="Sơ đồ: nhiều robot nối vào một server Xiaozhi riêng, server dùng ba thành phần nghe, hiểu và nói"><rect class="box" x="6" y="10" width="88" height="64" rx="8"/><g class="ico" transform="translate(34.0 18) scale(0.8)"><rect x="4" y="9" width="32" height="22" rx="8"/><rect x="13" y="16" width="5" height="7" rx="1.5"/><rect x="22" y="16" width="5" height="7" rx="1.5"/><path d="M9 35h22"/></g><text class="t1" x="50.0" y="67.0" text-anchor="middle">Robot 1</text><rect class="box" x="6" y="82" width="88" height="64" rx="8"/><g class="ico" transform="translate(34.0 90) scale(0.8)"><rect x="4" y="9" width="32" height="22" rx="8"/><rect x="13" y="16" width="5" height="7" rx="1.5"/><rect x="22" y="16" width="5" height="7" rx="1.5"/><path d="M9 35h22"/></g><text class="t1" x="50.0" y="139.0" text-anchor="middle">Robot 2</text><rect class="box" x="6" y="154" width="88" height="64" rx="8"/><g class="ico" transform="translate(34.0 162) scale(0.8)"><rect x="4" y="9" width="32" height="22" rx="8"/><rect x="13" y="16" width="5" height="7" rx="1.5"/><rect x="22" y="16" width="5" height="7" rx="1.5"/><path d="M9 35h22"/></g><text class="t1" x="50.0" y="211.0" text-anchor="middle">Robot 3</text><rect class="box box--hot" x="140" y="29" width="120" height="170" rx="8"/><g class="ico" transform="translate(180.0 41) scale(1.0)"><rect x="4" y="6" width="32" height="12" rx="3"/><rect x="4" y="22" width="32" height="12" rx="3"/><path d="M10 12h.01M10 28h.01M16 12h14M16 28h14"/></g><text class="t1" x="200.0" y="98.0" text-anchor="middle">Server Xiaozhi</text><text class="t2" x="200.0" y="115.0" text-anchor="middle">riêng của bạn</text><rect class="box" x="306" y="10" width="88" height="64" rx="8"/><g class="ico" transform="translate(334.0 18) scale(0.8)"><path d="M10 16a10 10 0 0 1 20 0c0 6-6 7-6 12a5 5 0 0 1-10 0"/><path d="M16 16a4 4 0 0 1 8 0"/></g><text class="t1" x="350.0" y="67.0" text-anchor="middle">Nghe</text><rect class="box" x="306" y="82" width="88" height="64" rx="8"/><g class="ico" transform="translate(334.0 90) scale(0.8)"><path d="M16 6a5 5 0 0 0-5 5 5 5 0 0 0-3 8 5 5 0 0 0 3 8 5 5 0 0 0 9 3V9a5 5 0 0 0-4-3zM24 6a5 5 0 0 1 5 5 5 5 0 0 1 3 8 5 5 0 0 1-3 8 5 5 0 0 1-9 3"/></g><text class="t1" x="350.0" y="139.0" text-anchor="middle">Hiểu</text><rect class="box" x="306" y="154" width="88" height="64" rx="8"/><g class="ico" transform="translate(334.0 162) scale(0.8)"><path d="M6 15h6l9-7v24l-9-7H6z"/><path d="M27 14a8 8 0 0 1 0 12M31 10a13 13 0 0 1 0 20"/></g><text class="t1" x="350.0" y="211.0" text-anchor="middle">Nói</text><path class="wire" d="M96 42H118V114H138"/><path class="wire" d="M96 114H138"/><path class="wire" d="M96 186H118V114"/><path class="wire" d="M262 114H284M284 42V186M284 42H304M284 114H304M284 186H304"/></svg></div>
+    <div>
+      <h2 class="h2" id="h-vd">Cần server theo yêu cầu riêng?</h2>
+      <div class="prose lead-prose">
+        <p>Ngoài server tại nhà cho một robot, mình dựng server riêng theo yêu cầu: nhiều robot dùng chung, chọn nhà cung cấp nhận dạng giọng nói và model AI, hoặc tích hợp Xiaozhi.</p>
+      </div>
+      <p style="margin-top:22px"><a class="btn btn--blue" href="lap-trinh-ai.html#vi-du">Xem ví dụ triển khai</a></p>
+    </div>
   </div>
 </section>
 
@@ -302,15 +328,14 @@
           <img class="brand__mark" src="assets/img/logo-mark.png" width="33" height="44" alt="">
           <img class="brand__word" src="assets/img/logo-wordmark.png" width="190" height="16" alt="Jr. Automation">
         </a>
-        <p class="footer__tag">Giải pháp robot, tự động hóa công nghiệp và AI ứng dụng.</p>
+        <p class="footer__tag">Robot Vector tiếng Việt, server riêng và phần mềm AI cho robot.</p>
       </div>
       <div>
         <h2>Dịch vụ</h2>
         <ul>
           <li><a href="vector-store.html">Vector Robot Store</a></li>
           <li><a href="vector-server.html">Vector Repair &amp; Server</a></li>
-          <li><a href="nachi.html">NACHI Robotics</a></li>
-          <li><a href="plc-hmi.html">PLC &amp; HMI Services</a></li>
+          <li><a href="lap-trinh-ai.html">Lập trình AI cho robot</a></li>
           <li><a href="kien-thuc.html">Kiến thức &amp; YouTube</a></li>
         </ul>
       </div>
@@ -325,7 +350,7 @@
         </ul>
       </div>
     </div>
-    <p class="footer__copy">© 2026 Tuan Cong Jr. Robot, tự động hóa và AI ứng dụng tại TP Hồ Chí Minh. Zalo và điện thoại 0336 341 050, email tuancongjr10@gmail.com.</p>
+    <p class="footer__copy">© 2026 Tuan Cong Jr. Robot Vector, server và phần mềm AI cho robot tại TP Hồ Chí Minh. Zalo và điện thoại 0336 341 050, email tuancongjr10@gmail.com.</p>
   </div>
 </footer>
 
