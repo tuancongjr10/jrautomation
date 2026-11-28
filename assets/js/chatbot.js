@@ -41,7 +41,8 @@
     aiPlat: { t: "Xem nền tảng AI", h: "lap-trinh-ai.html#nen-tang-ai", in: 1 },
     xz: { t: "Xem cách tích hợp Xiaozhi", h: "lap-trinh-ai.html#xiaozhi", in: 1 },
     yt: { t: "Kênh YouTube", h: C.yt, ext: 1 },
-    learn: { t: "Đọc trang Kiến thức", h: "kien-thuc.html", in: 1 }
+    learn: { t: "Đọc trang Kiến thức", h: "kien-thuc.html", in: 1 },
+    policy: { t: "Xem chính sách bảo hành, đổi trả", h: "chinh-sach.html", in: 1 }
   };
 
   /* ---------- Gợi ý câu hỏi (bấm là hỏi) ---------- */
@@ -179,13 +180,13 @@
       act: ["zalo", "call"] },
     { id: "payment", k: ["thanh toan", "chuyen khoan", "dat coc", "coc", "tra truoc", "tien mat", "tra gop", "hoa don"],
       a: "Dạ, trên web anh/chị không cần tạo tài khoản hay thanh toán trước. Sau khi em báo giá và hai bên chốt, cách thanh toán em trao đổi cụ thể với anh/chị qua Zalo ạ.",
-      act: ["zalo"] },
+      act: ["zalo", "policy"] },
     { id: "shipping", k: ["giao hang", "ship", "van chuyen", "tinh khac", "ngoai tinh", "gui hang", "nhan hang", "toan quoc", "ship toan quoc", "cod", "ship cod", "ha noi", "da nang", "o xa", "lam online", "ho tro online", "online"],
       a: "Dạ, bên em <b>ship toàn quốc</b>. Anh/chị ở tỉnh nào cũng đặt mua và trao đổi qua Zalo được. Với lập trình AI, em test và cân chỉnh online qua video call. Phí và thời gian giao hàng, em báo cụ thể khi chốt đơn ạ.",
-      act: ["zalo"] },
-    { id: "warranty", k: ["bao hanh", "bao hanh bao lau", "doi tra", "hoan tien", "dam bao"], w: 2,
-      a: "Dạ, chính sách bảo hành bên em:<ul><li><b>Robot Vector</b>: bảo hành 6 tháng.</li><li><b>Sửa chữa</b>: bảo hành 6 tháng.</li><li><b>Phần mềm cho Vector và phần mềm AI</b>: bảo hành 3 tháng.</li></ul>Anh/chị cần hỏi cụ thể thì nhắn Zalo cho em ạ.",
-      act: ["zalo"], chips: ["buy", "shipping", "contact"] },
+      act: ["zalo", "policy"] },
+    { id: "warranty", k: ["bao hanh", "bao hanh bao lau", "doi tra", "doi hang", "tra hang", "doi moi", "hoan tien", "dam bao", "chinh sach", "giao bi hu", "nhan bi hu", "bi vo"], w: 2,
+      a: "Dạ, chính sách bảo hành bên em:<ul><li><b>Robot Vector</b>: bảo hành 6 tháng.</li><li><b>Sửa chữa</b>: bảo hành 6 tháng.</li><li><b>Phần mềm cho Vector và phần mềm AI</b>: bảo hành 3 tháng.</li></ul><b>Đổi trả trong 24 giờ</b> nếu robot có hư hỏng khi nhận hàng: anh/chị quay video hoặc chụp ảnh chỗ hư hỏng rồi nhắn Zalo cho em trong 24 giờ kể từ khi nhận ạ.",
+      act: ["zalo", "policy"], chips: ["buy", "shipping", "contact"] },
     { id: "address", k: ["dia chi", "o dau", "cho nao", "chi duong", "ghe", "den xem", "toi xem", "cua hang o", "tan thoi hiep", "hiep thanh", "quan 12", "vi tri", "map", "maps"],
       a: "Dạ, địa chỉ bên em: " + C.addr + ".<br><br>Anh/chị nhắn Zalo trước khi ghé để em sắp xếp thời gian ạ.",
       act: ["maps", "zalo"] },
