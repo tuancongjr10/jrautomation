@@ -46,6 +46,11 @@ Có tên miền rồi, Cloudflare Email Routing cho phép tạo email dạng `li
 ## Trợ lý tự động (chatbot)
 
 - Mã: `assets/js/chatbot.js`, giao diện ở cuối `assets/css/style.css` (khối "Trợ lý tự động").
-- Chạy hoàn toàn trên trình duyệt, không cần server hay API key, không tốn phí.
-- Sửa câu trả lời trong mảng `KB`: `k` là từ khoá (viết không dấu), `a` là câu trả lời, `act` là nút bấm, `chips` là câu hỏi gợi ý.
-- Câu bot không hiểu sẽ được chép sẵn để khách dán vào Zalo, hoặc điền sẵn vào form trang Liên hệ.
+- Chạy hoàn toàn trên trình duyệt: không cần server, không cần API key, không giới hạn tin nhắn.
+- Bộ kiến thức `KB` có khoảng 70 chủ đề. Mỗi chủ đề có:
+  - `ex`: câu hỏi mẫu viết như khách gõ. Muốn dạy thêm cách hỏi mới, thêm câu vào đây.
+  - `k`: từ khoá viết không dấu (tuỳ chọn, giúp nhận chủ đề chắc hơn).
+  - `a`: câu trả lời; `act`: nút bấm; `chips`: câu hỏi gợi ý tiếp theo.
+- `ABBR`: từ điển chữ viết tắt (ko, đc, ib, nt, síp, in4, z, h...). Thêm từ mới vào đây.
+- Cách chọn câu trả lời: so độ giống giữa câu khách gõ với các câu mẫu (theo từ, cặp từ và mẩu chữ để chịu được gõ sai), cộng điểm từ khoá. Không chắc thì đưa vài chủ đề gần nhất để khách chọn; lạc đề thì mời nhắn Zalo và chép sẵn câu hỏi.
+- Tin nhắn có nhiều câu hỏi ("giá bao nhiêu? bảo hành mấy tháng?") được trả lời lần lượt.
