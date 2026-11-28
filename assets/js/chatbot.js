@@ -120,7 +120,7 @@
       ex: ["mấy giờ mở cửa", "tối nhắn có được không", "chủ nhật có làm không", "giờ làm việc thế nào", "khuya nhắn có ai trả lời không",
            "2 giờ sáng nhắn được không", "nhắn tin lúc nào cũng được hả", "lịch làm việc của shop", "thời gian làm việc", "shop có làm cuối tuần không",
            "khi nào shop trả lời tin nhắn", "làm việc từ mấy giờ đến mấy giờ"],
-      a: "Dạ, bên em làm việc từ <b>8h sáng đến 17h30 chiều, tất cả các ngày từ thứ 2 đến chủ nhật</b>.<br><br>Do khối lượng tin nhắn và công việc nhiều, bên em sẽ phản hồi anh/chị nhanh nhất trong khoảng <b>19h đến 23h</b>. Mong anh/chị thông cảm ạ :3",
+      a: "Dạ, bên em làm việc và <b>nhận hỗ trợ khách hàng 24/24</b>.<br><br>Do khối lượng tin nhắn và công việc nhiều, bên em sẽ phản hồi anh/chị nhanh nhất trong khoảng <b>19h đến 23h</b>. Mong anh/chị thông cảm ạ :3",
       act: ["zalo", "call"] },
     { id: "form", q: "Gửi yêu cầu qua form",
       k: ["form", "gui yeu cau", "dien thong tin", "de lai so", "de lai thong tin", "dang ky"],
