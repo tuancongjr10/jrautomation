@@ -46,7 +46,7 @@
 
   /* ---------- Gợi ý câu hỏi (bấm là hỏi) ---------- */
   var CHIP = {
-    services: "Bên bạn làm những gì?",
+    services: "Shop làm những gì?",
     buy: "Mua robot Vector",
     upgrade: "Nâng cấp Vector đang có",
     repair: "Vector bị hỏng",
@@ -73,23 +73,23 @@
 
   /* ---------- Bộ câu trả lời ---------- */
   function priceText(ctx) {
-    var t = "Giá bên mình báo riêng theo từng yêu cầu, rõ ràng trước khi làm. Trên web bạn không phải thanh toán gì.";
+    var t = "Dạ, giá bên em báo riêng theo từng yêu cầu, rõ ràng trước khi làm. Trên web anh/chị không phải thanh toán gì.";
     var topic = ctx.hit.store || ctx.hit.buy || ctx.hit.upgrade ? "store"
       : ctx.hit.repair || ctx.hit.server ? "repair"
       : ctx.hit.ai || ctx.hit.dog || ctx.hit.car || ctx.hit.loona ? "ai" : ctx.last;
-    if (topic === "store") t += "<br><br>Với robot Vector, giá tùy bạn mua robot cài sẵn hay nâng cấp robot đang có, model AI bạn chọn và số lượng.";
-    else if (topic === "repair") t += "<br><br>Với sửa chữa và cài server, giá báo theo tình trạng robot sau khi mình chẩn đoán lỗi.";
+    if (topic === "store") t += "<br><br>Với robot Vector, giá tùy anh/chị mua robot cài sẵn hay nâng cấp robot đang có, model AI anh/chị chọn và số lượng.";
+    else if (topic === "repair") t += "<br><br>Với sửa chữa và cài server, giá báo theo tình trạng robot sau khi em chẩn đoán lỗi.";
     else if (topic === "ai") t += "<br><br>Với lập trình AI, giá theo phạm vi dự án: loại robot, tính năng cần làm và model AI.";
     else t += "<ul><li>Robot Vector: tùy mua mới hay nâng cấp, model AI, số lượng.</li><li>Sửa chữa, cài server: báo theo tình trạng robot.</li><li>Lập trình AI: theo phạm vi dự án.</li></ul>";
-    return t + (topic ? "<br><br>" : "") + "Nhắn Zalo " + C.phone + " kèm mô tả ngắn, mình báo giá nhanh nhất.";
+    return t + (topic ? "<br><br>" : "") + "Anh/chị nhắn Zalo " + C.phone + " kèm mô tả ngắn, em báo giá nhanh nhất ạ.";
   }
 
   var KB = [
     { id: "human", k: ["gap nguoi", "nguoi that", "nhan vien", "tu van vien", "noi chuyen truc tiep", "chu shop", "chu cua hang", "goi lai cho toi", "goi lai cho minh", "goi lai cho em", "goi lai giup"],
-      a: "Bạn muốn trao đổi trực tiếp với Tuan Cong Jr thì nhắn Zalo hoặc gọi " + C.phone + ". Hoặc để lại số điện thoại qua form, mình sẽ gọi lại.",
+      a: "Dạ, anh/chị muốn trao đổi trực tiếp với anh Tuan Cong Jr thì nhắn Zalo hoặc gọi " + C.phone + " ạ. Hoặc anh/chị để lại số điện thoại qua form, bên em sẽ gọi lại ngay.",
       act: ["zalo", "call", "form"] },
     { id: "greet", k: ["xin chao", "chao", "hello", "hi", "helo", "alo", "hey", "shop oi", "ad oi", "admin oi", "co ai khong", "ban oi", "anh oi", "chi oi", "em oi"], w: 0.6,
-      a: "Xin chào! Mình là trợ lý tự động của Jr. Automation. Bạn cần hỗ trợ việc gì?",
+      a: "Dạ em chào anh/chị! Em là trợ lý tự động của Jr. Automation. Anh/chị cần em hỗ trợ việc gì ạ?",
       chips: MAIN_CHIPS },
     { id: "chot", k: ["chot", "chot don", "len don", "dat luon", "lay luon", "mua luon"], w: 2.5,
       a: "Dạ em xin cảm ơn anh/chị nhiều ạ. Anh/chị nhắn Zalo " + C.phone + " hoặc để lại số điện thoại qua form để em liên hệ chốt đơn và báo giá ạ.",
@@ -98,108 +98,108 @@
       a: "Dạ em xin cảm ơn anh/chị nhiều ạ.",
       act: ["zalo"], chips: [] },
     { id: "thanks", k: ["cam on", "thank", "thanks", "tks", "thank you", "ok cam on"],
-      a: "Không có gì nhé. Cần thêm gì bạn cứ hỏi, hoặc nhắn Zalo " + C.phone + " để trao đổi trực tiếp với Tuan Cong Jr.",
+      a: "Dạ không có gì ạ. Anh/chị cần thêm gì cứ hỏi em, hoặc nhắn Zalo " + C.phone + " để trao đổi trực tiếp với anh Tuan Cong Jr ạ.",
       act: ["zalo"] },
     { id: "bye", k: ["tam biet", "bye", "hen gap lai", "goodbye"],
-      a: "Cảm ơn bạn đã ghé Jr. Automation. Khi cần, bạn nhắn Zalo " + C.phone + " nhé.",
+      a: "Dạ em cảm ơn anh/chị đã ghé Jr. Automation. Khi cần, anh/chị nhắn Zalo " + C.phone + " cho em nhé ạ.",
       act: ["zalo"] },
     { id: "about", k: ["ban la ai", "gioi thieu", "jr automation", "jrautomation", "la ai", "cua ai", "tuan cong", "ai lam", "ai so huu", "thuong hieu"],
-      a: "Jr. Automation là thương hiệu của Tuan Cong Jr tại TP Hồ Chí Minh, chuyên robot Vector nói tiếng Việt, server riêng và phần mềm AI cho robot. Kênh YouTube Jr. Automation chia sẻ kiến thức về robot và AI.<br><br>Mình là trợ lý tự động trên web. Cần trao đổi trực tiếp, bạn nhắn Zalo " + C.phone + ".",
+      a: "Dạ, Jr. Automation là thương hiệu của anh Tuan Cong Jr tại TP Hồ Chí Minh, chuyên robot Vector nói tiếng Việt, server riêng và phần mềm AI cho robot. Kênh YouTube Jr. Automation chia sẻ kiến thức về robot và AI.<br><br>Em là trợ lý tự động trên web. Cần trao đổi trực tiếp, anh/chị nhắn Zalo " + C.phone + " ạ.",
       act: ["zalo", "yt"], chips: ["services", "contact"] },
     { id: "services", k: ["dich vu", "lam gi", "nhan lam", "cung cap", "co nhung gi", "ban nhung gi", "nhung gi", "lam duoc gi", "ho tro gi"],
-      a: "Bên mình có ba dịch vụ chính:<ul><li><b>Cửa hàng Vector</b>: mua robot Vector cài sẵn tiếng Việt và AI, hoặc nâng cấp robot bạn đang có.</li><li><b>Sửa chữa & máy chủ Vector</b>: sửa phần cứng, cài server riêng, Việt hóa giọng nói, kết nối AI.</li><li><b>Lập trình AI cho robot</b>: chó robot, xe tự hành, robot thú cưng, robot tự chế; tích hợp Xiaozhi, ChatGPT, Gemini, DeepSeek.</li></ul>Bạn quan tâm mục nào?",
+      a: "Dạ, bên em có ba dịch vụ chính:<ul><li><b>Cửa hàng Vector</b>: mua robot Vector cài sẵn tiếng Việt và AI, hoặc nâng cấp robot anh/chị đang có.</li><li><b>Sửa chữa & máy chủ Vector</b>: sửa phần cứng, cài server riêng, Việt hóa giọng nói, kết nối AI.</li><li><b>Lập trình AI cho robot</b>: chó robot, xe tự hành, robot thú cưng, robot tự chế; tích hợp Xiaozhi, ChatGPT, Gemini, DeepSeek.</li></ul>Anh/chị quan tâm mục nào ạ?",
       chips: ["buy", "upgrade", "repair", "ai"] },
     { id: "vectorwhat", topic: "store", k: ["vector la gi", "vector la robot gi", "robot vector la gi", "anki", "vector goc", "vector ai la gi", "vector ai khac gi", "khac gi"],
-      a: "Vector là robot để bàn nhỏ do Anki thiết kế: có camera, micro, cảm biến, màn hình mặt biểu cảm, tự di chuyển bằng bánh xích và nhận ra khuôn mặt.<br><br>Vector gốc không có sẵn tiếng Việt và cần máy chủ để nghe lệnh. Bản Vector AI của mình thêm giọng nói tiếng Việt, cho robot trò chuyện với model AI và chạy qua server riêng nên không phụ thuộc hãng.",
+      a: "Dạ, Vector là robot để bàn nhỏ do Anki thiết kế: có camera, micro, cảm biến, màn hình mặt biểu cảm, tự di chuyển bằng bánh xích và nhận ra khuôn mặt.<br><br>Vector gốc không có sẵn tiếng Việt và cần máy chủ để nghe lệnh. Bản Vector AI bên em thêm giọng nói tiếng Việt, cho robot trò chuyện với model AI và chạy qua server riêng nên không phụ thuộc hãng ạ.",
       act: ["store"], chips: ["buy", "upgrade", "price"] },
     { id: "buy", topic: "store", k: ["mua", "dat mua", "dat hang", "ban robot", "mua robot", "vector ai", "order", "con hang", "co hang", "co ban", "ban vector", "mua vector", "muon mua", "robot vector"],
-      a: "Robot Vector bên mình sau khi cài sẽ:<ul><li>Nghe và nói tiếng Việt, kèm hướng dẫn sử dụng tiếng Việt.</li><li>Trò chuyện với AI: ChatGPT, DeepSeek, Xiaozhi hoặc model khác.</li><li>Luyện tiếng Anh cùng robot.</li><li>Điều khiển di chuyển từ xa bằng điện thoại.</li></ul>Gói mua robot cài sẵn gồm robot Vector, server riêng đã cấu hình, model AI bạn chọn và hướng dẫn sử dụng. Robot bảo hành 6 tháng, phần mềm bảo hành 3 tháng. Ship toàn quốc, giá báo riêng theo yêu cầu.",
+      a: "Dạ, robot Vector bên em sau khi cài sẽ:<ul><li>Nghe và nói tiếng Việt, kèm hướng dẫn sử dụng tiếng Việt.</li><li>Trò chuyện với AI: ChatGPT, DeepSeek, Xiaozhi hoặc model khác.</li><li>Luyện tiếng Anh cùng robot.</li><li>Điều khiển di chuyển từ xa bằng điện thoại.</li></ul>Gói mua robot cài sẵn gồm robot Vector, server riêng đã cấu hình, model AI anh/chị chọn và hướng dẫn sử dụng. Robot bảo hành 6 tháng, phần mềm bảo hành 3 tháng. Bên em ship toàn quốc, giá báo riêng theo yêu cầu ạ.",
       act: ["buy", "zalo"], chips: ["price", "warranty", "upgrade"] },
     { id: "upgrade", topic: "store", k: ["nang cap", "da co vector", "co san vector", "minh co vector", "toi co vector", "em co vector", "co vector roi"],
-      a: "Bạn đã có Vector thì mình nâng cấp ngay trên robot đó: cài và cấu hình server riêng, Việt hóa giọng nói, kết nối model AI bạn chọn, kèm hướng dẫn sử dụng tiếng Việt. Phần mềm bảo hành 3 tháng.<br><br>Trong form đặt mua, bạn chọn \"Nâng cấp robot của mình\". Nhắn thêm bản Vector và tình trạng robot để mình xác nhận trước khi báo giá.",
+      a: "Dạ, anh/chị đã có Vector thì em nâng cấp ngay trên robot đó: cài và cấu hình server riêng, Việt hóa giọng nói, kết nối model AI anh/chị chọn, kèm hướng dẫn sử dụng tiếng Việt. Phần mềm bảo hành 3 tháng.<br><br>Trong form đặt mua, anh/chị chọn \"Nâng cấp robot của mình\" và nhắn thêm bản Vector, tình trạng robot để em xác nhận trước khi báo giá ạ.",
       act: ["upForm", "zalo"], chips: ["price", "prepare", "version"] },
     { id: "repair", topic: "repair", k: ["sua", "sua chua", "hong", "hu", "bi hu", "hu hong", "bi hong", "loi", "bi loi", "pin", "chai pin", "sac", "khong sac", "sac khong vao", "banh xich", "man hinh", "khong chay", "khong di chuyen", "khong len nguon", "khong mo", "liet", "dung im"],
-      a: "Vector bị lỗi pin, sạc không vào, bánh xích không chạy hay màn hình lỗi, mình chẩn đoán đúng lỗi rồi báo giá trước khi sửa.<ol><li>Bạn gửi tình trạng robot qua form, ảnh và video nhắn thêm qua Zalo.</li><li>Mình chẩn đoán, nói rõ phạm vi việc và chi phí.</li><li>Sửa theo phạm vi đã chốt.</li><li>Chạy thử cùng bạn rồi mới bàn giao.</li></ol>",
+      a: "Dạ, Vector bị lỗi pin, sạc không vào, bánh xích không chạy hay màn hình lỗi, bên em chẩn đoán đúng lỗi rồi báo giá trước khi sửa, sửa xong bảo hành 6 tháng ạ.<ol><li>Anh/chị gửi tình trạng robot qua form, ảnh và video nhắn thêm qua Zalo.</li><li>Em chẩn đoán, nói rõ phạm vi việc và chi phí.</li><li>Sửa theo phạm vi đã chốt.</li><li>Chạy thử cùng anh/chị rồi mới bàn giao.</li></ol>",
       act: ["repairForm", "zalo"], chips: ["server", "price", "address"] },
     { id: "server", topic: "repair", k: ["server", "sever", "may chu", "wire pod", "wirepod", "hey vector", "khong nghe", "khong nghe lenh", "khong phan hoi", "khong tra loi", "mat ket noi", "khong ket noi", "wifi", "wi fi", "escape pod", "ddl", "digital dream labs", "thue bao", "het han"],
-      a: "Gọi \"Hey Vector\" mà robot không phản hồi thường là do robot không còn kết nối được máy chủ để hiểu giọng nói.<br><br>Mình cài server riêng bằng Wire-Pod (phần mềm mã nguồn mở, miễn phí) chạy trên máy tính cũ hoặc Raspberry Pi cùng mạng Wi-Fi với robot. Vector nghe lệnh trở lại, không phụ thuộc máy chủ của hãng và nối được với model AI.",
+      a: "Dạ, gọi \"Hey Vector\" mà robot không phản hồi thường là do robot không còn kết nối được máy chủ để hiểu giọng nói.<br><br>Bên em cài server riêng bằng Wire-Pod (phần mềm mã nguồn mở, miễn phí) chạy trên máy tính cũ hoặc Raspberry Pi cùng mạng Wi-Fi với robot. Vector nghe lệnh trở lại, không phụ thuộc máy chủ của hãng và nối được với model AI ạ.",
       act: ["repairForm", "serverWhat", "zalo"], chips: ["prepare", "version", "price"] },
     { id: "version", topic: "repair", k: ["1 0", "2 0", "ban nao", "phien ban", "vector 1", "vector 2", "doi nao", "ban cu", "ban moi"],
-      a: "Wire-Pod hoạt động với cả Vector 1.0 và 2.0. Bạn nhắn bản Vector và tình trạng robot để mình xác nhận trước khi báo giá.",
+      a: "Dạ, Wire-Pod hoạt động với cả Vector 1.0 và 2.0. Anh/chị nhắn em bản Vector và tình trạng robot để em xác nhận trước khi báo giá ạ.",
       act: ["zalo"], chips: ["upgrade", "server", "price"] },
     { id: "vietnamese", topic: "store", k: ["tieng viet", "viet hoa", "noi tieng viet", "giong noi", "giong viet", "hieu tieng viet"],
-      a: "Sau khi Việt hóa, Vector nghe và nói tiếng Việt: chào hỏi, hỏi đáp và ra lệnh bằng tiếng Việt, kèm hướng dẫn sử dụng tiếng Việt. Mình làm được cho robot mua mới lẫn robot bạn đang có.",
+      a: "Dạ, sau khi Việt hóa, Vector nghe và nói tiếng Việt: chào hỏi, hỏi đáp và ra lệnh bằng tiếng Việt, kèm hướng dẫn sử dụng tiếng Việt. Bên em làm được cho robot mua mới lẫn robot anh/chị đang có ạ.",
       act: ["store", "zalo"], chips: ["buy", "upgrade", "price"] },
     { id: "english", topic: "store", k: ["tieng anh", "luyen tieng anh", "hoc tieng anh", "english"],
-      a: "Vector chuyển sang tiếng Anh được để bạn luyện nghe và nói cùng robot. Tính năng này có trong gói Vector AI, cả khi mua mới lẫn nâng cấp robot đang có.",
+      a: "Dạ, Vector chuyển sang tiếng Anh được để anh/chị luyện nghe và nói cùng robot. Tính năng này có trong gói Vector AI, cả khi mua mới lẫn nâng cấp robot đang có ạ.",
       chips: ["buy", "upgrade"] },
     { id: "remote", topic: "store", k: ["dieu khien", "tu xa", "bang dien thoai", "dieu khien tu xa", "app dieu khien"],
-      a: "Sau khi cài, bạn dùng điện thoại điều khiển Vector di chuyển từ xa, không cần đứng cạnh robot.",
+      a: "Dạ, sau khi cài, anh/chị dùng điện thoại điều khiển Vector di chuyển từ xa, không cần đứng cạnh robot ạ.",
       chips: ["buy", "upgrade"] },
     { id: "xiaozhi", k: ["xiaozhi", "xiao zhi", "tieu tri"], w: 1.5,
-      a: "Xiaozhi là nền tảng trợ lý giọng nói AI mã nguồn mở. Robot thu giọng nói, Xiaozhi chuyển thành chữ, nhờ model AI trả lời rồi đọc thành tiếng.<br><br>Mình tích hợp Xiaozhi cho robot Vector và cho robot tự chế dùng bo ESP32-S3.",
+      a: "Dạ, Xiaozhi là nền tảng trợ lý giọng nói AI mã nguồn mở. Robot thu giọng nói, Xiaozhi chuyển thành chữ, nhờ model AI trả lời rồi đọc thành tiếng.<br><br>Bên em tích hợp Xiaozhi cho robot Vector và cho robot tự chế dùng bo ESP32-S3 ạ.",
       act: ["xz"], chips: ["models", "aicost", "ai"] },
     { id: "offline", k: ["offline", "khong can internet", "khong can mang", "khong co mang", "ollama", "chay o nha", "chay offline"], w: 1.5,
-      a: "Được, khi model chạy trên máy tính trong nhà qua Ollama và robot kết nối với máy đó qua Wi-Fi. Cách này không tốn phí theo lượt và dữ liệu không rời khỏi nhà, nhưng máy cần đủ RAM.<br><br>Robot nhỏ dùng ESP32 không tự chạy được model lớn, nên vẫn cần máy tính đi kèm.",
+      a: "Dạ được ạ, khi model chạy trên máy tính trong nhà qua Ollama và robot kết nối với máy đó qua Wi-Fi. Cách này không tốn phí theo lượt và dữ liệu không rời khỏi nhà, nhưng máy cần đủ RAM.<br><br>Robot nhỏ dùng ESP32 không tự chạy được model lớn, nên vẫn cần máy tính đi kèm ạ.",
       chips: ["models", "aicost", "ai"] },
     { id: "aicost", k: ["ton phi", "mat phi", "phi ai", "phi hang thang", "mien phi", "free", "tra phi", "phi su dung", "phi duy tri", "ton tien"], w: 1.2,
-      a: "Xiaozhi là phần mềm mã nguồn mở. ChatGPT, Gemini và các model gọi qua API thường tính phí theo lượng dùng của nhà cung cấp. Model chạy offline qua Ollama không tốn phí theo lượt nhưng cần máy tính đủ mạnh.<br><br>Mình nói rõ chi phí từng phương án khi báo giá để bạn chọn theo ngân sách.",
+      a: "Dạ, Xiaozhi là phần mềm mã nguồn mở. ChatGPT, Gemini và các model gọi qua API thường tính phí theo lượng dùng của nhà cung cấp. Model chạy offline qua Ollama không tốn phí theo lượt nhưng cần máy tính đủ mạnh.<br><br>Em nói rõ chi phí từng phương án khi báo giá để anh/chị chọn theo ngân sách ạ.",
       chips: ["models", "offline", "price"] },
     { id: "models", k: ["chatgpt", "chat gpt", "gpt", "openai", "deepseek", "gemini", "model", "mo hinh", "ai nao", "claude", "qwen", "llama", "tri tue nhan tao", "chon ai"],
-      a: "Mình kết nối được ChatGPT, DeepSeek, Gemini, Xiaozhi, Qwen hoặc model chạy offline qua Ollama. Mỗi model khác nhau về chi phí, tốc độ và chất lượng tiếng Việt. Mình tư vấn theo ngân sách và việc bạn muốn robot làm.",
+      a: "Dạ, bên em kết nối được ChatGPT, DeepSeek, Gemini, Xiaozhi, Qwen hoặc model chạy offline qua Ollama. Mỗi model khác nhau về chi phí, tốc độ và chất lượng tiếng Việt. Em tư vấn theo ngân sách và việc anh/chị muốn robot làm ạ.",
       act: ["aiPlat"], chips: ["xiaozhi", "aicost", "offline"] },
     { id: "loona", topic: "ai", k: ["loona", "emo", "robot emo", "living ai", "keyi"], w: 3,
-      a: "<b>Loona</b> có chế độ lập trình kéo thả Google Blockly trong app, nên mình viết được chuỗi động tác, trò chơi, kịch bản theo ý bạn và hướng dẫn bé học lập trình cùng Loona.<br><br><b>EMO</b> hiện chưa có SDK chính thức để lập trình. Mình tư vấn khai thác tính năng có sẵn, hoặc làm robot để bàn kiểu EMO với AI và tiếng Việt theo ý bạn.",
+      a: "Dạ, <b>Loona</b> có chế độ lập trình kéo thả Google Blockly trong app, nên bên em viết được chuỗi động tác, trò chơi, kịch bản theo ý anh/chị và hướng dẫn bé học lập trình cùng Loona.<br><br><b>EMO</b> hiện chưa có SDK chính thức để lập trình. Em tư vấn khai thác tính năng có sẵn, hoặc làm robot để bàn kiểu EMO với AI và tiếng Việt theo ý anh/chị ạ.",
       act: ["aiForm", "zalo"], chips: ["ai", "price"] },
     { id: "dog", topic: "ai", kr: ["chó", "cún"], k: ["robot cho", "cho may", "cyberdog", "unitree", "go2", "bittle", "petoi", "4 chan", "bon chan", "servo"], w: 1.3,
-      a: "Có khung chó robot (ví dụ khung in 3D 12 servo), mình viết phần mềm cho bo ESP32-S3 kết nối Xiaozhi AI:<ul><li>Dáng đi, tự đi, tránh vật cản, chống rơi mép bàn.</li><li>Động tác ngồi, bắt tay, chào khi nghe lệnh.</li><li>Sơ đồ đấu nối servo, cảm biến và nguồn.</li><li>Test và cân chỉnh online qua video call.</li></ul>Bạn tự chuẩn bị servo và linh kiện. Với CyberDog, Unitree Go2 bản EDU, Petoi Bittle, mình lập trình qua SDK hoặc mã nguồn mở của hãng.",
+      a: "Dạ, anh/chị có khung chó robot (ví dụ khung in 3D 12 servo) thì bên em viết phần mềm cho bo ESP32-S3 kết nối Xiaozhi AI:<ul><li>Dáng đi, tự đi, tránh vật cản, chống rơi mép bàn.</li><li>Động tác ngồi, bắt tay, chào khi nghe lệnh.</li><li>Sơ đồ đấu nối servo, cảm biến và nguồn.</li><li>Test và cân chỉnh online qua video call.</li></ul>Anh/chị tự chuẩn bị servo và linh kiện. Với CyberDog, Unitree Go2 bản EDU, Petoi Bittle, bên em lập trình qua SDK hoặc mã nguồn mở của hãng ạ.",
       act: ["aiEx", "aiForm", "zalo"], chips: ["price", "process"] },
     { id: "car", topic: "ai", k: ["xe tu hanh", "xe robot", "xe tu chay", "lidar", "do line", "tranh vat can", "ban do", "agv"], w: 1.3,
-      a: "Mình lập trình xe robot tự chạy:<ul><li>Tránh vật cản bằng cảm biến siêu âm, ToF hoặc LiDAR.</li><li>Đi theo người, dò line, quay về vị trí ban đầu.</li><li>Vẽ bản đồ phòng và tự đi tới điểm đã đặt với ROS 2.</li><li>Nhận lệnh nói qua Xiaozhi hoặc ChatGPT, ví dụ \"ra phòng khách\".</li></ul>Bản đồ và tự tìm đường cần LiDAR cùng máy tính nhúng như Raspberry Pi. Xe dùng ESP32 làm được tránh vật cản và lệnh thoại.",
+      a: "Dạ, bên em lập trình xe robot tự chạy:<ul><li>Tránh vật cản bằng cảm biến siêu âm, ToF hoặc LiDAR.</li><li>Đi theo người, dò line, quay về vị trí ban đầu.</li><li>Vẽ bản đồ phòng và tự đi tới điểm đã đặt với ROS 2.</li><li>Nhận lệnh nói qua Xiaozhi hoặc ChatGPT, ví dụ \"ra phòng khách\".</li></ul>Bản đồ và tự tìm đường cần LiDAR cùng máy tính nhúng như Raspberry Pi. Xe dùng ESP32 làm được tránh vật cản và lệnh thoại ạ.",
       act: ["aiEx", "aiForm", "zalo"], chips: ["price", "process"] },
     { id: "smarthome", topic: "ai", k: ["bat den", "tat den", "bat tat", "nha thong minh", "dieu khien den", "thiet bi trong nha", "smart home"], w: 1.2,
-      a: "Robot ra lệnh bật tắt đèn và thiết bị trong nhà được, tùy loại robot và thiết bị bạn đang dùng. Bạn mô tả robot và thiết bị để mình xem cách làm phù hợp.",
+      a: "Dạ, robot ra lệnh bật tắt đèn và thiết bị trong nhà được, tùy loại robot và thiết bị anh/chị đang dùng. Anh/chị mô tả robot và thiết bị để em xem cách làm phù hợp ạ.",
       act: ["aiForm", "zalo"], chips: ["ai", "price"] },
     { id: "ai", topic: "ai", k: ["lap trinh", "phan mem", "phan mem ai", "robot tu che", "tu che", "esp32", "esp32 s3", "raspberry", "jetson", "ros", "ros 2", "robot thu cung", "viet code", "code", "firmware", "camera", "nhan dien", "robot khac", "robot cua hang", "sdk", "do an"],
-      a: "Mình nhận lập trình phần mềm AI theo yêu cầu cho chó robot, xe tự hành, robot thú cưng như Loona, EMO và robot tự chế:<ul><li>Giọng nói tiếng Việt, trò chuyện với AI.</li><li>Lệnh thoại riêng, camera nhận diện người và đồ vật.</li><li>Dáng đi, chuyển động, tránh vật cản.</li><li>Ra lệnh bật tắt thiết bị trong nhà.</li></ul>Để báo giá nhanh, bạn cho mình biết robot loại gì, robot cần làm gì và model AI mong muốn.",
+      a: "Dạ, bên em nhận lập trình phần mềm AI theo yêu cầu cho chó robot, xe tự hành, robot thú cưng như Loona, EMO và robot tự chế:<ul><li>Giọng nói tiếng Việt, trò chuyện với AI.</li><li>Lệnh thoại riêng, camera nhận diện người và đồ vật.</li><li>Dáng đi, chuyển động, tránh vật cản.</li><li>Ra lệnh bật tắt thiết bị trong nhà.</li></ul>Để em báo giá nhanh, anh/chị cho em biết robot loại gì, robot cần làm gì và model AI mong muốn ạ.",
       act: ["aiForm", "aiEx", "zalo"], chips: ["dog", "car", "loona"] },
     { id: "price", k: ["gia", "bao nhieu", "chi phi", "bao gia", "nhieu tien", "bn tien", "gia ca", "bang gia", "gia re", "mac qua", "dat qua", "phi", "tien cong", "gia sao"], w: 1.1,
       a: priceText, act: ["zalo", "form"], chips: ["process", "contact"] },
     { id: "prepare", k: ["chuan bi", "can gi", "can nhung gi", "can co gi", "raspberry pi", "may tinh cu", "yeu cau gi", "can mua them"],
       a: function (ctx) {
-        if (ctx.last === "ai") return "Để báo giá nhanh, bạn cho mình biết:<ul><li>Robot của bạn: chó robot, xe tự hành, Loona, EMO, robot hãng có SDK hay robot tự chế.</li><li>Robot cần làm gì: trò chuyện, nhận lệnh, di chuyển, nhận diện bằng camera, điều khiển thiết bị.</li><li>Model AI mong muốn, hoặc để mình tư vấn.</li><li>Số lượng robot.</li></ul>";
-        return "Với robot Vector, bạn cần một mạng Wi-Fi ở nhà. Server chạy trên một thiết bị cùng mạng với robot, như máy tính cũ hoặc Raspberry Pi. Mình tư vấn phương án gọn và tiết kiệm điện nhất khi báo giá.";
+        if (ctx.last === "ai") return "Dạ, để em báo giá nhanh, anh/chị cho em biết:<ul><li>Robot của anh/chị: chó robot, xe tự hành, Loona, EMO, robot hãng có SDK hay robot tự chế.</li><li>Robot cần làm gì: trò chuyện, nhận lệnh, di chuyển, nhận diện bằng camera, điều khiển thiết bị.</li><li>Model AI mong muốn, hoặc để em tư vấn.</li><li>Số lượng robot.</li></ul>";
+        return "Dạ, với robot Vector, anh/chị cần một mạng Wi-Fi ở nhà. Server chạy trên một thiết bị cùng mạng với robot, như máy tính cũ hoặc Raspberry Pi. Em tư vấn phương án gọn và tiết kiệm điện nhất khi báo giá ạ.";
       },
       chips: ["price", "process", "contact"] },
     { id: "process", k: ["quy trinh", "cac buoc", "lam sao de", "cach dat", "dat nhu the nao", "bat dau the nao", "lam viec the nao", "cach thuc", "cach lam viec"],
-      a: "Cách làm việc với mình:<ol><li>Bạn chọn dịch vụ và gửi yêu cầu qua form hoặc nhắn Zalo.</li><li>Mình liên hệ lại, đề xuất phương án và báo giá rõ ràng.</li><li>Hai bên chốt rồi mình thực hiện.</li><li>Chạy thử cùng bạn, bàn giao kèm hướng dẫn tiếng Việt.</li></ol>Bạn không cần tạo tài khoản hay thanh toán trước trên web.",
+      a: "Dạ, cách làm việc bên em:<ol><li>Anh/chị chọn dịch vụ và gửi yêu cầu qua form hoặc nhắn Zalo.</li><li>Em liên hệ lại, đề xuất phương án và báo giá rõ ràng.</li><li>Hai bên chốt rồi bên em thực hiện.</li><li>Chạy thử cùng anh/chị, bàn giao kèm hướng dẫn tiếng Việt.</li></ol>Anh/chị không cần tạo tài khoản hay thanh toán trước trên web ạ.",
       act: ["form", "zalo"], chips: ["price", "contact"] },
     { id: "time", k: ["bao lau", "mat bao lau", "may ngay", "bao nhieu ngay", "khi nao xong", "thoi gian lam", "tien do", "lam nhanh", "lay gap", "can gap"],
-      a: "Thời gian tùy việc: sửa chữa phụ thuộc lỗi của robot, lập trình phụ thuộc phạm vi dự án. Mình báo tiến độ cụ thể khi báo giá và bàn giao đúng tiến độ đã chốt. Cần gấp, bạn gọi hoặc nhắn Zalo " + C.phone + ".",
+      a: "Dạ, thời gian tùy việc: sửa chữa phụ thuộc lỗi của robot, lập trình phụ thuộc phạm vi dự án. Em báo tiến độ cụ thể khi báo giá và bàn giao đúng tiến độ đã chốt. Cần gấp, anh/chị gọi hoặc nhắn Zalo " + C.phone + " ạ.",
       act: ["zalo", "call"] },
     { id: "payment", k: ["thanh toan", "chuyen khoan", "dat coc", "coc", "tra truoc", "tien mat", "tra gop", "hoa don"],
-      a: "Trên web bạn không cần tạo tài khoản hay thanh toán trước. Sau khi mình báo giá và hai bên chốt, cách thanh toán mình trao đổi cụ thể với bạn qua Zalo.",
+      a: "Dạ, trên web anh/chị không cần tạo tài khoản hay thanh toán trước. Sau khi em báo giá và hai bên chốt, cách thanh toán em trao đổi cụ thể với anh/chị qua Zalo ạ.",
       act: ["zalo"] },
     { id: "shipping", k: ["giao hang", "ship", "van chuyen", "tinh khac", "ngoai tinh", "gui hang", "nhan hang", "toan quoc", "ship toan quoc", "cod", "ship cod", "ha noi", "da nang", "o xa", "lam online", "ho tro online", "online"],
-      a: "Bên mình <b>ship toàn quốc</b>. Bạn ở tỉnh nào cũng đặt mua và trao đổi qua Zalo được. Với lập trình AI, mình test và cân chỉnh online qua video call. Phí và thời gian giao hàng, mình báo cụ thể khi chốt đơn.",
+      a: "Dạ, bên em <b>ship toàn quốc</b>. Anh/chị ở tỉnh nào cũng đặt mua và trao đổi qua Zalo được. Với lập trình AI, em test và cân chỉnh online qua video call. Phí và thời gian giao hàng, em báo cụ thể khi chốt đơn ạ.",
       act: ["zalo"] },
-    { id: "warranty", k: ["bao hanh", "bao hanh bao lau", "doi tra", "hoan tien", "dam bao"], w: 1.5,
-      a: "Chính sách bảo hành:<ul><li><b>Robot Vector</b>: bảo hành 6 tháng.</li><li><b>Phần mềm cho Vector và phần mềm AI</b> mình lập trình: bảo hành 3 tháng.</li></ul>Các trường hợp khác, mình nói rõ khi báo giá. Bạn nhắn Zalo nếu cần hỏi cụ thể.",
+    { id: "warranty", k: ["bao hanh", "bao hanh bao lau", "doi tra", "hoan tien", "dam bao"], w: 2,
+      a: "Dạ, chính sách bảo hành bên em:<ul><li><b>Robot Vector</b>: bảo hành 6 tháng.</li><li><b>Sửa chữa</b>: bảo hành 6 tháng.</li><li><b>Phần mềm cho Vector và phần mềm AI</b>: bảo hành 3 tháng.</li></ul>Anh/chị cần hỏi cụ thể thì nhắn Zalo cho em ạ.",
       act: ["zalo"], chips: ["buy", "shipping", "contact"] },
     { id: "address", k: ["dia chi", "o dau", "cho nao", "chi duong", "ghe", "den xem", "toi xem", "cua hang o", "tan thoi hiep", "hiep thanh", "quan 12", "vi tri", "map", "maps"],
-      a: "Địa chỉ: " + C.addr + ".<br><br>Bạn nhắn Zalo trước khi ghé để mình sắp xếp thời gian.",
+      a: "Dạ, địa chỉ bên em: " + C.addr + ".<br><br>Anh/chị nhắn Zalo trước khi ghé để em sắp xếp thời gian ạ.",
       act: ["maps", "zalo"] },
     { id: "hours", k: ["gio lam", "may gio", "mo cua", "dong cua", "gio mo", "luc nao", "chu nhat", "cuoi tuan", "buoi toi", "ban dem", "nua dem", "24 24", "24 7", "nhan khach", "gio nhan khach"],
-      a: "Mình nhận khách <b>24/24</b>. Bạn nhắn Zalo, gọi " + C.phone + " hoặc gửi form bất cứ lúc nào.",
+      a: "Dạ, bên em nhận khách <b>24/24</b>. Anh/chị nhắn Zalo, gọi " + C.phone + " hoặc gửi form bất cứ lúc nào ạ.",
       act: ["zalo", "call"] },
     { id: "form", k: ["form", "gui yeu cau", "dien thong tin", "de lai so", "de lai thong tin", "dang ky"],
-      a: "Mỗi trang dịch vụ có form ngắn, hoặc bạn dùng form ở trang Liên hệ. Mình liên hệ lại qua số điện thoại hoặc Zalo bạn để lại.",
+      a: "Dạ, mỗi trang dịch vụ có form ngắn, hoặc anh/chị dùng form ở trang Liên hệ. Em liên hệ lại qua số điện thoại hoặc Zalo anh/chị để lại ạ.",
       act: ["form", "buy", "repairForm", "aiForm"] },
     { id: "youtube", k: ["youtube", "video", "kenh", "kien thuc", "tai lieu", "huong dan su dung"],
-      a: "Kênh YouTube Jr. Automation chia sẻ về robot và phần mềm AI. Trang Kiến thức có giải thích ngắn về Vector, server riêng, Xiaozhi và cách chọn model AI.",
+      a: "Dạ, kênh YouTube Jr. Automation chia sẻ về robot và phần mềm AI. Trang Kiến thức có giải thích ngắn về Vector, server riêng, Xiaozhi và cách chọn model AI ạ.",
       act: ["yt", "learn"] },
     { id: "contact", k: ["lien he", "zalo", "so dien thoai", "sdt", "dien thoai", "goi", "facebook", "fb", "email", "mail", "gmail", "nhan tin", "inbox", "hotline", "lien lac"],
-      a: "Liên hệ Tuan Cong Jr:<ul><li>Zalo và điện thoại: <b>" + C.phone + "</b></li><li>Email: " + C.mail + "</li><li>Facebook: Tuan Cong</li><li>Địa chỉ: " + C.addr + "</li></ul>Nhắn Zalo thường nhanh nhất.",
+      a: "Dạ, anh/chị liên hệ anh Tuan Cong Jr qua:<ul><li>Zalo và điện thoại: <b>" + C.phone + "</b></li><li>Email: " + C.mail + "</li><li>Facebook: Tuan Cong</li><li>Địa chỉ: " + C.addr + "</li></ul>Nhắn Zalo thường nhanh nhất ạ.",
       act: ["zalo", "call", "fb", "mail"] }
   ];
 
@@ -278,7 +278,7 @@
   var root = el("div", "jrbot");
   root.innerHTML =
     '<div class="jrbot__teaser" hidden>' +
-      '<button type="button" class="jrbot__teaser-text">Xin chào! Bạn cần tư vấn robot Vector hay lập trình AI cho robot?</button>' +
+      '<button type="button" class="jrbot__teaser-text">Dạ em chào anh/chị! Anh/chị cần tư vấn robot Vector hay lập trình AI cho robot ạ?</button>' +
       '<button type="button" class="jrbot__teaser-x" aria-label="Ẩn lời chào">' + ICON_X + '</button>' +
     '</div>' +
     '<button type="button" class="jrbot__launcher" aria-expanded="false" aria-controls="jrbot-panel">' + FACE +
@@ -286,14 +286,14 @@
     '<section class="jrbot__panel" id="jrbot-panel" role="dialog" aria-labelledby="jrbot-title" hidden>' +
       '<header class="jrbot__head">' + FACE +
         '<div class="jrbot__who"><p class="jrbot__name" id="jrbot-title">Trợ lý Jr. Automation</p>' +
-        '<p class="jrbot__sub">Trả lời tự động. Cần gấp, nhắn Zalo ' + C.phone + '.</p></div>' +
+        '<p class="jrbot__sub">Trả lời tự động. Cần gấp, anh/chị nhắn Zalo ' + C.phone + '.</p></div>' +
         '<button type="button" class="jrbot__icon jrbot__restart" aria-label="Bắt đầu lại cuộc trò chuyện" title="Bắt đầu lại">' + ICON_RE + '</button>' +
         '<button type="button" class="jrbot__icon jrbot__close" aria-label="Đóng trợ lý" title="Đóng">' + ICON_X + '</button>' +
       '</header>' +
       '<div class="jrbot__log" role="log" aria-live="polite" aria-relevant="additions"></div>' +
       '<form class="jrbot__form" autocomplete="off">' +
         '<label class="jrbot__sr" for="jrbot-in">Nhập câu hỏi</label>' +
-        '<input id="jrbot-in" class="jrbot__in" type="text" maxlength="300" placeholder="Nhập câu hỏi của bạn" enterkeyhint="send">' +
+        '<input id="jrbot-in" class="jrbot__in" type="text" maxlength="300" placeholder="Anh/chị nhập câu hỏi tại đây" enterkeyhint="send">' +
         '<button type="submit" class="jrbot__send" aria-label="Gửi câu hỏi">' + ICON_SEND + '</button>' +
       '</form>' +
     '</section>';
@@ -389,7 +389,7 @@
     var msg = q.slice(0, 500);
     botSay({
       who: "bot",
-      html: "Câu này mình chưa trả lời chắc chắn được. Bạn gửi câu hỏi cho Tuan Cong Jr qua Zalo hoặc form để được trả lời chính xác. Bấm nút Zalo, câu hỏi của bạn sẽ được chép sẵn, bạn chỉ cần dán vào khung chat.",
+      html: "Dạ, câu này em chưa trả lời chắc chắn được ạ. Anh/chị gửi câu hỏi cho anh Tuan Cong Jr qua Zalo hoặc form để được trả lời chính xác. Anh/chị bấm nút Zalo, câu hỏi sẽ được chép sẵn, chỉ cần dán vào khung chat là xong ạ.",
       acts: [
         { t: "Nhắn Zalo " + C.phone, h: C.zalo, ext: 1, main: 1, copy: msg },
         { t: "Gửi câu hỏi qua form", h: "lien-he.html?msg=" + encodeURIComponent(msg) + "#form", in: 1 },
@@ -412,7 +412,7 @@
     state.greeted = true;
     botSay({
       who: "bot",
-      html: "Xin chào, mình là trợ lý tự động của <b>Jr. Automation</b>.<br><br>Bên mình bán và nâng cấp robot Vector nói tiếng Việt, sửa chữa và cài server cho Vector, và lập trình phần mềm AI cho robot. Bạn cần hỗ trợ việc gì? Chọn gợi ý bên dưới hoặc gõ câu hỏi nhé.",
+      html: "Dạ em chào anh/chị! Em là trợ lý tự động của <b>Jr. Automation</b>.<br><br>Bên em bán và nâng cấp robot Vector nói tiếng Việt, sửa chữa và cài server cho Vector, và lập trình phần mềm AI cho robot. Anh/chị cần em hỗ trợ việc gì ạ? Anh/chị chọn gợi ý bên dưới hoặc gõ câu hỏi nhé.",
       id: "hello"
     }, MAIN_CHIPS);
   }
@@ -483,7 +483,7 @@
       try {
         if (navigator.clipboard) navigator.clipboard.writeText(text).then(function () {
           if (!link.parentNode.querySelector(".jrbot__note")) {
-            link.parentNode.appendChild(el("p", "jrbot__note", "Đã chép câu hỏi. Mở Zalo rồi dán vào khung chat là xong."));
+            link.parentNode.appendChild(el("p", "jrbot__note", "Dạ em đã chép câu hỏi, anh/chị mở Zalo rồi dán vào khung chat là xong ạ."));
             scrollEnd();
           }
         }, function () {});
@@ -495,7 +495,7 @@
   try {
     var q = new URLSearchParams(location.search).get("msg");
     var box = document.getElementById("c-nd");
-    if (q && box && !box.value) box.value = "Câu hỏi từ trợ lý trên web: " + q.slice(0, 500);
+    if (q && box && !box.value) box.value = "Câu hỏi gửi từ trợ lý trên web: " + q.slice(0, 500);
   } catch (e) {}
 
   function mount() {
