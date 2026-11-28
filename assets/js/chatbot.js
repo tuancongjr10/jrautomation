@@ -604,7 +604,10 @@
   /* ================= GIAO DIỆN ================= */
   var script = document.currentScript;
   var BASE = script ? script.src.replace(/assets\/js\/chatbot\.js.*$/, "") : "";
-  var STORE_KEY = "jrbot.v2";
+  /* Đổi BOT_VERSION mỗi lần sửa câu trả lời → khung chat tự xoá tin nhắn cũ của bản trước */
+  var BOT_VERSION = "20261128k";
+  var STORE_KEY = "jrbot." + BOT_VERSION;
+  try { Object.keys(sessionStorage).forEach(function (k) { if (k.indexOf("jrbot.") === 0 && k !== STORE_KEY) sessionStorage.removeItem(k); }); } catch (e) {}
 
   var ACT = {
     zalo: { t: "Nhắn Zalo " + C.phone, h: C.zalo, ext: 1, main: 1 },
