@@ -151,8 +151,8 @@
       a: "Dạ, anh/chị đã có Vector thì em nâng cấp ngay trên robot đó: cài và cấu hình server riêng, Việt hóa giọng nói, kết nối model AI anh/chị chọn, kèm hướng dẫn sử dụng tiếng Việt. Phần mềm bảo hành 3 tháng.<br><br>Trong form đặt mua, anh/chị chọn \"Nâng cấp robot của mình\" và nhắn thêm bản Vector, tình trạng robot để em xác nhận trước khi báo giá ạ.",
       act: ["upForm", "zalo"], chips: ["price", "prepare", "version"] },
     { id: "stock", q: "Còn hàng không?", topic: "store", w: 2.5,
-      k: ["con hang", "co hang", "co san khong", "het hang", "hang cu", "like new", "second hand", "2hand", "con vector khong", "con ban", "con robot khong", "ban vector cu", "co vector cu", "da qua su dung", "hang san", "nguyen seal", "seal", "moi nguyen", "full box", "fullbox", "hang moi khong"],
-      ex: ["còn hàng không shop", "có sẵn robot không", "hàng mới hay đã qua sử dụng", "có bán vector cũ không", "vector like new giá bao nhiêu", "có vector mới nguyên hộp không", "hiện còn bán không"],
+      k: ["con hang", "co hang", "co san khong", "het hang", "hang cu", "like new", "second hand", "2hand", "con vector khong", "con ban", "con robot khong", "co robot khong", "robot co khong", "ban vector cu", "co vector cu", "da qua su dung", "hang san", "nguyen seal", "seal", "moi nguyen", "full box", "fullbox", "hang moi khong"],
+      ex: ["còn hàng không shop", "có sẵn robot không", "hàng mới hay đã qua sử dụng", "có bán vector cũ không", "vector like new giá bao nhiêu", "có vector mới nguyên hộp không", "hiện còn bán không", "shop có robot không"],
       a: owner("Dạ, tình trạng hàng (robot có sẵn, bản 1.0 hay 2.0, mới hay đã qua sử dụng) thay đổi theo từng thời điểm."),
       act: ["zalo"], chips: ["price", "version"] },
     { id: "version", q: "Vector 1.0 hay 2.0?", topic: "store",
@@ -312,8 +312,8 @@
       a: "Dạ, bên em nhận lập trình phần mềm AI theo yêu cầu cho chó robot, xe tự hành, robot thú cưng như Loona, EMO và robot tự chế:<ul><li>Giọng nói tiếng Việt, trò chuyện với AI.</li><li>Lệnh thoại riêng, camera nhận diện người và đồ vật.</li><li>Dáng đi, chuyển động, tránh vật cản.</li><li>Ra lệnh bật tắt thiết bị trong nhà.</li></ul>Để em báo giá nhanh, anh/chị cho em biết robot loại gì, robot cần làm gì và model AI mong muốn ạ.",
       act: ["aiForm", "aiEx", "zalo"], chips: ["dog", "car", "loona"] },
     { id: "dog", q: "Chó robot", topic: "ai", w: 1.3,
-      kr: ["cún"], k: ["chos", "robot chos", "chos robot", "cho may", "cyberdog", "unitree", "go2", "bittle", "petoi", "4 chan", "bon chan", "servo"],
-      ex: ["làm phần mềm cho chó robot", "mình có khung chó robot in 3D", "lập trình unitree go2 được không", "chó robot 4 chân dùng esp32", "petoi bittle lập trình được không"],
+      kr: ["cún"], k: ["chos", "robot chos", "chos robot", "cho may", "robot biet di", "biet di", "dang di", "cyberdog", "unitree", "go2", "bittle", "petoi", "4 chan", "bon chan", "servo"],
+      ex: ["làm phần mềm cho chó robot", "mình có khung chó robot in 3D", "lập trình unitree go2 được không", "chó robot 4 chân dùng esp32", "petoi bittle lập trình được không", "lam cho robot biet di"],
       a: "Dạ, anh/chị có khung chó robot (ví dụ khung in 3D 12 servo) thì bên em viết phần mềm cho bo ESP32-S3 kết nối Xiaozhi AI:<ul><li>Dáng đi, tự đi, tránh vật cản, chống rơi mép bàn.</li><li>Động tác ngồi, bắt tay, chào khi nghe lệnh.</li><li>Sơ đồ đấu nối servo, cảm biến và nguồn.</li><li>Test và cân chỉnh online qua video call.</li></ul>Anh/chị tự chuẩn bị servo và linh kiện. Với CyberDog, Unitree Go2 bản EDU, Petoi Bittle, bên em lập trình qua SDK hoặc mã nguồn mở của hãng ạ.",
       act: ["aiEx", "aiForm", "zalo"], chips: ["price", "process", "parts"] },
     { id: "car", q: "Xe tự hành", topic: "ai", w: 1.3,
@@ -349,8 +349,8 @@
 
     /* ---------- Mua bán, chính sách ---------- */
     { id: "price", q: "Giá bao nhiêu?", w: 1.1,
-      k: ["gia", "bao nhieu", "chi phi", "bao gia", "nhieu tien", "gia ca", "bang gia", "gia re", "mac qua", "dat qua", "tien cong", "gia sao", "het bao nhieu"],
-      ex: ["giá bao nhiêu vậy", "bao nhiêu tiền một con", "cho xin bảng giá", "chi phí sửa hết bao nhiêu", "báo giá giúp mình", "giá lập trình thế nào"],
+      k: ["gia", "bao nhieu", "chi phi", "bao gia", "nhieu tien", "gia ca", "bang gia", "gia re", "mac qua", "dat qua", "tien cong", "gia sao", "het bao nhieu", "gia bao nhieu", "ban gia", "gia 1 con", "gia mot con", "bao nhieu tien"],
+      ex: ["giá bao nhiêu vậy", "bao nhiêu tiền một con", "cho xin bảng giá", "chi phí sửa hết bao nhiêu", "báo giá giúp mình", "giá lập trình thế nào", "vector bên em bán giá nhiêu", "giá nhiêu vậy shop"],
       a: priceText, act: ["zalo", "form"], chips: ["process", "discount", "contact"] },
     { id: "discount", q: "Có giảm giá không?",
       k: ["giam gia", "khuyen mai", "bot chut", "bot gia", "uu dai", "sale", "voucher", "giam chut"],
@@ -443,12 +443,17 @@
   function norm(s) {
     s = deaccent(s).replace(/[^a-z0-9]+/g, " ").trim();
     if (!s) return "";
-    return s.split(" ").map(function (w) {
+    s = s.split(" ").map(function (w) {
       if (ABBR.hasOwnProperty(w)) return ABBR[w];
       var m = w.match(/^(\d+)(h|k|tr)$/);
       if (m) return m[1] + " " + { h: "gio", k: "nghin", tr: "trieu" }[m[2]];
       return w;
     }).join(" ");
+    /* Gõ không dấu: "có hông", "được hông" ở cuối câu là "có không" (không phải "hỏng") */
+    s = s.replace(/(^| )(co|duoc|phai|chua|dung|ok|ban) hong(?=( shop| ad| a| vay| ban| em| anh| chi| nha| nhe)?$)/, "$1$2 khong");
+    /* "giá nhiêu", "nhiêu tiền" = giá bao nhiêu */
+    s = s.replace(/(^| )(gia|het|mat) nhieu( |$)/g, "$1$2 bao nhieu$3").replace(/(^| )nhieu tien( |$)/g, "$1bao nhieu tien$2");
+    return s;
   }
   function rawText(s) {
     return " " + String(s || "").toLowerCase().normalize("NFC").replace(/[^\p{L}\p{N}]+/gu, " ") + " ";
@@ -539,16 +544,21 @@
     if (hit.aicost && hit.price && !hit.xiaozhi) lift("aicost");
     /* Hỏi thời gian giao hàng → giao hàng */
     if (hit.shipping && hit.time) lift("shipping");
+    /* Tên chó robot của hãng (CyberDog, Unitree, Petoi...) → chó robot */
+    if (/(^| )(cyberdog|unitree|go2|bittle|petoi)( |$)/.test(n) && !hit.price) lift("dog");
     /* Hỏi phí của Xiaozhi → chủ đề riêng */
     if (hit.xiaozhi && (hit.aicost || hit.price)) { var xf = ranked.filter(function (r) { return r.id === "xiaozhifree"; })[0]; ranked.splice(ranked.indexOf(xf), 1); xf.s = Math.max(xf.s, CFG.high); ranked.unshift(xf); }
     /* "Xin chào, cho hỏi giá..." → trả lời phần câu hỏi */
     if (ranked[0] && ranked[0].id === "greet" && ranked[1] && ranked[1].s >= CFG.mid) ranked.shift();
     /* Hỏi giá kèm tên dịch vụ ("sửa vector giá bao nhiêu") → ưu tiên trả lời giá */
-    if (hit.price && ranked[0] && ranked[0].id !== "price" && BY_ID[ranked[0].id].topic && ranked[0].id !== "stock") {
+    var pricey = /(^| )(gia|tien|chi phi|bao gia)( |$)/.test(n);
+    var generic = { services: 1, about: 1, greet: 1, compliment: 1 };
+    if (hit.price && ranked[0] && ranked[0].id !== "price" && ranked[0].id !== "stock" &&
+        (BY_ID[ranked[0].id].topic || (pricey && generic[ranked[0].id]))) {
       var p = ranked.filter(function (r) { return r.id === "price"; })[0];
       if (p && p.s >= CFG.mid) { ranked.splice(ranked.indexOf(p), 1); ranked.unshift(p); }
     }
-    return { ranked: ranked, hit: hit, cover: content.length ? known / content.length : 1 };
+    return { ranked: ranked, hit: hit, cover: content.length ? known / content.length : 1, words: content.length };
   }
 
   function match(text) {
@@ -556,7 +566,9 @@
     if (!top) return { kind: "none", hit: r.hit };
     if (r.ack) return { kind: "answer", it: BY_ID.ack, hit: {} };
     /* Câu có nhiều từ lạ mà điểm chưa thật cao → hỏi lại cho chắc, không đoán bừa */
-    var sure = top.s >= CFG.high && !(r.cover < 0.6 && top.s < 0.9);
+    var sure = top.s >= CFG.high && !(r.cover < 0.6 && top.s < 0.9) &&
+      /* Câu quá chung chung ("dùng được không shop") mà không có từ khoá → hỏi lại */
+      !(r.words <= 1 && !top.kw && top.s < 0.8);
     if (sure) return { kind: "answer", it: BY_ID[top.id], hit: r.hit, score: top.s };
     if (top.s >= CFG.mid) {
       var opts = r.ranked.filter(function (x) { return x.s >= CFG.mid * 0.75 && x.id !== "greet"; }).slice(0, 3).map(function (x) { return x.id; });
