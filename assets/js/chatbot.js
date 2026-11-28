@@ -91,6 +91,12 @@
     { id: "greet", k: ["xin chao", "chao", "hello", "hi", "helo", "alo", "hey", "shop oi", "ad oi", "admin oi", "co ai khong", "ban oi", "anh oi", "chi oi", "em oi"], w: 0.6,
       a: "Xin chào! Mình là trợ lý tự động của Jr. Automation. Bạn cần hỗ trợ việc gì?",
       chips: MAIN_CHIPS },
+    { id: "chot", k: ["chot", "chot don", "len don", "dat luon", "lay luon", "mua luon"], w: 2.5,
+      a: "Dạ em xin cảm ơn anh/chị nhiều ạ. Anh/chị nhắn Zalo " + C.phone + " hoặc để lại số điện thoại qua form để em liên hệ chốt đơn và báo giá ạ.",
+      act: ["zalo", "call", "form"], chips: [] },
+    { id: "ack", k: [],
+      a: "Dạ em xin cảm ơn anh/chị nhiều ạ.",
+      act: ["zalo"], chips: [] },
     { id: "thanks", k: ["cam on", "thank", "thanks", "tks", "thank you", "ok cam on"],
       a: "Không có gì nhé. Cần thêm gì bạn cứ hỏi, hoặc nhắn Zalo " + C.phone + " để trao đổi trực tiếp với Tuan Cong Jr.",
       act: ["zalo"] },
@@ -209,8 +215,17 @@
   }
   KB.forEach(function (it) { it.kn = it.k.map(norm); });
 
+  /* Tin nhắn chỉ gồm các từ xác nhận ("ok", "oke nhé", "dạ được rồi"...) */
+  var ACK = " ok oke okay okie oki okee okela okla oce vang da u uk um uhm roi duoc nhe nha nhen a shop ad admin ban em anh chi oi vay the thoi luon dong y nhieu ";
+  function isAck(n) {
+    var w = n.split(" ");
+    return w.length <= 6 && w.some(function (x) { return /^(ok|oke|okay|okie|oki|okee|okela|okla|oce|vang|uk|u|um|uhm|duoc|roi|da)$/.test(x); }) &&
+      w.every(function (x) { return ACK.indexOf(" " + x + " ") >= 0; });
+  }
+
   function match(text) {
     var t = " " + norm(text) + " ", hit = {}, best = null, bestScore = 0;
+    if (t.trim() && isAck(t.trim())) return { it: BY_ID.ack, hit: {} };
     var raw = " " + String(text || "").toLowerCase().normalize("NFC").replace(/[^\p{L}\p{N}]+/gu, " ") + " ";
     if (t.trim() === "") return null;
     KB.forEach(function (it) {
