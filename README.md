@@ -42,3 +42,10 @@ Tên miền .vn có phí đăng ký hằng năm, không có gói miễn phí. Kh
 5. Đổi địa chỉ trong `canonical`, `og:url`, `og:image`, `sitemap.xml`, `robots.txt` và đường dẫn trong `404.html` sang tên miền mới.
 
 Có tên miền rồi, Cloudflare Email Routing cho phép tạo email dạng `lienhe@jrautomation.vn` và tự chuyển về Gmail, miễn phí.
+
+## Trợ lý tự động (chatbot)
+
+- Mã: `assets/js/chatbot.js`, giao diện ở cuối `assets/css/style.css` (khối "Trợ lý tự động").
+- Chạy hoàn toàn trên trình duyệt, không cần server hay API key, không tốn phí.
+- Sửa câu trả lời trong mảng `KB`: `k` là từ khoá (viết không dấu), `a` là câu trả lời, `act` là nút bấm, `chips` là câu hỏi gợi ý.
+- Câu bot không hiểu sẽ được chép sẵn để khách dán vào Zalo, hoặc điền sẵn vào form trang Liên hệ.
